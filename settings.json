@@ -8,8 +8,8 @@
   "explorer.confirmDragAndDrop": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.suggestSelection": "first",
-  "editor.suggest.preview": true,
   "vsintellicode.modify.editor.suggestSelection": "enabled",
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.occurrencesHighlight": false,
@@ -187,8 +187,6 @@
   "settingsSync.ignoredSettings": ["background.windowBackgrounds"],
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "background.windowBackgrounds": [
-    "c:/background/54249-devushka_anime_volosy.jpg"
-  ],
+  "background.windowBackgrounds": ["c:/background/54249-devushka_anime_volosy.jpg"],
   "files.autoSave": "onFocusChange"
 }

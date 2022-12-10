@@ -43,6 +43,16 @@
     "command": "-workbench.action.files.newUntitledFile"
   },
   {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+  {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
@@ -55,12 +65,12 @@
   {
     "key": "ctrl+n",
     "command": "selectNextCodeAction",
-    "when": "codeActionMenuVisible"
+    "when": "actionWidgetVisible"
   },
   {
     "key": "ctrl+p",
     "command": "selectPrevCodeAction",
-    "when": "codeActionMenuVisible"
+    "when": "actionWidgetVisible"
   },
   {
     "key": "ctrl+f1",

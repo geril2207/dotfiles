@@ -1,40 +1,33 @@
 {
-  "window.newWindowDimensions": "maximized",
-  "editor.smoothScrolling": true,
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 5,
-  "editor.fontFamily": "JetBrains Mono",
+  "workbench.colorCustomizations": {
+    "[One Dark Pro]": {
+      "editorBracketHighlight.foreground1": "#FFD700",
+      "editorBracketHighlight.foreground2": "#c678dd",
+      "editorBracketHighlight.foreground3": "#56b6c2"
+    }
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "explorer.decorations.colors": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "enabled",
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "editor.occurrencesHighlight": false,
+  "explorer.compactFolders": false,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "'JetBrainsMono NF', monospace",
+  "terminal.integrated.fontSize": 14,
+  "window.newWindowDimensions": "maximized",
   "emmet.triggerExpansionOnTab": true,
-  "editor.linkedEditing": true,
   "prettier.useEditorConfig": false,
   "prettier.printWidth": 100,
   "prettier.semi": false,
   "prettier.singleQuote": true,
+  "vsintellicode.modify.editor.suggestSelection": "enabled",
   "security.workspace.trust.emptyWindow": false,
   "security.workspace.trust.enabled": false,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.quickSuggestions": {
-    "other": "on",
-    "comments": "off",
-    "strings": "on"
-  },
   "eslint.alwaysShowStatus": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.fontFamily": "'JetBrainsMono NF', monospace",
-  "terminal.integrated.fontSize": 14,
-  "explorer.decorations.colors": false,
-  "editor.fontLigatures": true,
-  "workbench.iconTheme": "material-icon-theme",
   "files.associations": {
     "*.cgi": "php"
   },
@@ -53,14 +46,6 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "workbench.colorCustomizations": {
-    "[One Dark Pro]": {
-      "editorBracketHighlight.foreground1": "#FFD700",
-      "editorBracketHighlight.foreground2": "#c678dd",
-      "editorBracketHighlight.foreground3": "#56b6c2"
-    }
-  },
-  "editor.inlayHints.enabled": "offUnlessPressed",
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useCtrlKeys": true,
@@ -88,6 +73,15 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // {
+    //   "before": ["<C-u>"],
+    //   "after": ["<C-u>", "z", "z"]
+    // },
+    // {
+    //   "before": ["<C-d>"],
+    //   "after": ["<C-d>", "z", "z"]
+    // },
+    // { "before": ["u"], "commands": ["undo"] },
     { "before": ["K"], "commands": ["lineBreakInsert"], "silent": true },
     {
       "before": ["<tab>"],
@@ -101,11 +95,11 @@
     { "before": ["g", "f"], "commands": ["editor.action.goToReferences"] },
     {
       "before": ["[", "e"],
-      "commands": ["editor.action.marker.next"]
+      "commands": ["editor.action.marker.prev", "closeMarkersNavigation", "editor.action.showHover"]
     },
     {
       "before": ["]", "e"],
-      "commands": ["editor.action.marker.prev"]
+      "commands": ["editor.action.marker.next", "closeMarkersNavigation", "editor.action.showHover"]
     },
     { "before": ["<leader>", "d"], "commands": ["editor.action.revealDefinition"] },
     { "before": ["<leader>", "b"], "commands": ["workbench.action.navigateBack"] },
@@ -133,27 +127,27 @@
       "before": ["<leader>", "f", "z"],
       "commands": ["search.action.openNewEditor"]
     },
+    { "before": ["<leader>", "x", "e", "E"], "commands": ["errorLens.toggle"] },
     {
-      "before": ["<leader>", "<leader>", "a"],
+      "before": ["<leader>", "x", "e", "e"],
+      "commands": ["errorLens.toggleError"]
+    },
+    {
+      "before": ["<leader>", "x", "e", "w"],
+      "commands": ["errorLens.toggleWarning"]
+    },
+    { "before": ["<leader>", "x", "e", "i"], "commands": ["errorLens.toggleInfo"] },
+    {
+      "before": ["<leader>", "a", "f"],
+      "commands": ["workbench.action.toggleCenteredLayout"]
+    },
+    {
+      "before": ["<leader>", "a", "a"],
       "commands": ["workbench.action.toggleActivityBarVisibility"]
     },
     {
       "before": ["<leader>", "<leader>", "W"],
       "after": ["<leader>", "<leader>", "<leader>", "b", "d", "w"]
-    },
-    { "before": ["<leader>", "<leader>", "<leader>", "E"], "commands": ["errorLens.toggle"] },
-    {
-      "before": ["<leader>", "<leader>", "<leader>", "e"],
-      "commands": ["errorLens.toggleError"]
-    },
-    {
-      "before": ["<leader>", "<leader>", "<leader>", "w"],
-      "commands": ["errorLens.toggleWarning"]
-    },
-    { "before": ["<leader>", "<leader>", "<leader>", "i"], "commands": ["errorLens.toggleInfo"] },
-    {
-      "before": ["<leader>", "<leader>", "<leader>", "f"],
-      "commands": ["workbench.action.toggleCenteredLayout"]
     }
   ],
   "vim.leader": "<space>",
@@ -167,26 +161,45 @@
     "<C-h>": false,
     "<C-j>": false
   },
-  "editor.lineNumbers": "relative",
-  "editor.cursorSurroundingLines": 4,
   "search.exclude": {
     "**/node_modules": true
   },
-  "workbench.colorTheme": "One Dark Pro",
   "zenMode.hideLineNumbers": false,
-  "errorLens.enabledDiagnosticLevels": ["info", "error", "warning"],
+  "errorLens.enabledDiagnosticLevels": [
+    "info",
+    "error"
+  ],
   "errorLens.enabled": true,
   "errorLens.scrollbarHackEnabled": true,
   "errorLens.messageBackgroundMode": "none",
-  "editor.fontSize": 16,
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.hidesExplorerArrows": false,
-  "explorer.compactFolders": false,
-  "editor.stickyScroll.enabled": false,
   "background.backgroundOpacity": [0.93, 0.9, 0.9, 0.9],
   "settingsSync.ignoredSettings": ["background.windowBackgrounds"],
+  "files.autoSave": "onFocusChange",
   "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
   "background.windowBackgrounds": ["c:/background/54249-devushka_anime_volosy.jpg"],
-  "files.autoSave": "onFocusChange"
+  "editor.stickyScroll.enabled": false,
+  "editor.fontSize": 16,
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 4,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.fontLigatures": true,
+  "editor.smoothScrolling": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.suggestSelection": "first",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.wordWrap": "on",
+  "editor.occurrencesHighlight": false,
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "workbench.activityBar.visible": false
 }

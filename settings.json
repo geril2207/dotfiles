@@ -16,7 +16,7 @@
   "explorer.compactFolders": false,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "'JetBrainsMono NF', monospace",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
   "window.newWindowDimensions": "maximized",
   "emmet.triggerExpansionOnTab": true,
   "prettier.useEditorConfig": false,
@@ -28,6 +28,9 @@
   "security.workspace.trust.enabled": false,
   "eslint.alwaysShowStatus": true,
   "vsicons.dontShowNewVersionMessage": true,
+  "reactSnippets.settings.importReactOnTop": true,
+  "reactSnippets.settings.typescriptPropsStatePrefix": "interface",
+  "rust-analyzer.completion.callable.snippets": "none",
   "files.associations": {
     "*.cgi": "php"
   },
@@ -46,6 +49,7 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
+  // "vim.cursorStylePerMode.insert": "block",
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useCtrlKeys": true,
@@ -60,6 +64,12 @@
   "vim.overrideCopy": true,
   "vim.insertModeKeyBindings": [
     {
+      "before": ["<Esc>"],
+      "after": ["<Esc>"],
+      "commands": ["workbench.action.files.save"],
+      "silent": true
+    },
+    {
       "before": ["j", "j"],
       "after": ["<Esc>"]
     },
@@ -73,14 +83,14 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // {
-    //   "before": ["<C-u>"],
-    //   "after": ["<C-u>", "z", "z"]
-    // },
-    // {
-    //   "before": ["<C-d>"],
-    //   "after": ["<C-d>", "z", "z"]
-    // },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
     // { "before": ["u"], "commands": ["undo"] },
     { "before": ["K"], "commands": ["lineBreakInsert"], "silent": true },
     {
@@ -115,6 +125,7 @@
       "before": ["<leader>", "p"],
       "commands": ["workbench.action.quickOpen"]
     },
+    { "before": ["<leader>", "t"], "commands": ["workbench.action.showAllSymbols"] },
     {
       "before": ["<leader>", "w"],
       "commands": ["workbench.action.closeActiveEditor"]
@@ -159,16 +170,14 @@
     "<C-v>": false,
     "<C-x>": false,
     "<C-h>": false,
-    "<C-j>": false
+    "<C-j>": false,
+    "<C-t>": false
   },
   "search.exclude": {
     "**/node_modules": true
   },
   "zenMode.hideLineNumbers": false,
-  "errorLens.enabledDiagnosticLevels": [
-    "info",
-    "error"
-  ],
+  "errorLens.enabledDiagnosticLevels": ["info", "warning", "error"],
   "errorLens.enabled": true,
   "errorLens.scrollbarHackEnabled": true,
   "errorLens.messageBackgroundMode": "none",
@@ -177,16 +186,26 @@
   "background.backgroundOpacity": [0.93, 0.9, 0.9, 0.9],
   "settingsSync.ignoredSettings": ["background.windowBackgrounds"],
   "files.autoSave": "onFocusChange",
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "*.mutable": {
+        "underline": false
+      }
+    }
+  },
+  "editor.suggestOnTriggerCharacters": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.suggest.snippetsPreventQuickSuggestions": true,
   "background.windowBackgrounds": ["c:/background/54249-devushka_anime_volosy.jpg"],
   "editor.stickyScroll.enabled": false,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.lineNumbers": "relative",
   "editor.cursorSurroundingLines": 4,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.fontLigatures": true,
-  "editor.smoothScrolling": true,
+  "editor.smoothScrolling": false,
+  "editor.cursorBlinking": "solid",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -195,11 +214,19 @@
   "editor.wordWrap": "on",
   "editor.occurrencesHighlight": false,
   "editor.linkedEditing": true,
+
   "editor.bracketPairColorization.enabled": true,
   "editor.quickSuggestions": {
     "other": "on",
     "comments": "off",
     "strings": "on"
   },
-  "workbench.activityBar.visible": false
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "extensions.ignoreRecommendations": true,
+  "workbench.startupEditor": "none",
+  "update.mode": "none",
+  "update.enableWindowsBackgroundUpdates": false,
+  "window.zoomLevel": 1,
+  "editor.unicodeHighlight.ambiguousCharacters": false
 }

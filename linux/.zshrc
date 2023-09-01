@@ -12,6 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 dev="/mnt/d"
 nvimconfig="$HOME/.config/nvim"
+cfgs="$HOME/my/workflow-configs"
 lrust="$HOME/job/rust"
 ljob="$HOME/job"
 
@@ -78,7 +79,7 @@ bindkey '^[f' autosuggest-accept
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions z)
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 source $ZSH/oh-my-zsh.sh
 
@@ -107,9 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(oh-my-posh init zsh --config $HOME/ohmyposh/ohmyposh.json)"
+eval "$(oh-my-posh init zsh --config $HOME/ohmyposh.json)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias ls="lsd -1lXA --group-directories-first"
-# alias ls="lsd -1XA"
+alias lg="lazygit"

@@ -199,4 +199,5 @@ for_window [class="neovide"] focus
 assign [class="neovide"] 3
 assign [class="TelegramDesktop"] 4
 assign [class="telegram-desktop"] 4
+assign [class="discord"] 4
 

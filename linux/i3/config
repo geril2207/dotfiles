@@ -201,7 +201,9 @@ exec feh --bg-fill ~/Pictures/imgs/54157-devushka_anime_gorod_megapolis_svecheni
 
 for_window [class="neovide"] focus
 assign [class="neovide"] 3
+for_window [class="Code"] focus
+assign [class="Code"] 3
+
 assign [class="TelegramDesktop"] 4
-assign [class="telegram-desktop"] 4
 assign [class="discord"] 4
 

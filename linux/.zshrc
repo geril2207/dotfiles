@@ -115,3 +115,10 @@ export NVM_DIR="$HOME/.nvm"
 alias ls="lsd -1lXA --group-directories-first"
 alias lg="lazygit"
 alias nvide="neovide"
+
+
+
+start_docker ()
+{
+  sudo systemctl start docker
+}

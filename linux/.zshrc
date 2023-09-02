@@ -112,7 +112,7 @@ eval "$(oh-my-posh init zsh --config $HOME/ohmyposh.json)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias ls="lsd -1lXA --group-directories-first"
+alias ls="exa -l --group-directories-first --icons"
 alias lg="lazygit"
 alias nvide="neovide"
 

@@ -204,6 +204,9 @@ assign [class="neovide"] 3
 for_window [class="Code"] focus
 assign [class="Code"] 3
 
+for_window [class="TelegramDesktop"] workspace_layout tabbed
+for_window [class="discord"] workspace_layout tabbed
+for_window [class="DBeaver"] workspace_layout tabbed
 assign [class="TelegramDesktop"] 4
 assign [class="discord"] 4
 assign [class="DBeaver"] 4

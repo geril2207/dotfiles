@@ -4,34 +4,8 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "nextTab"
-            },
-            "keys": "ctrl+l"
-        },
-        {
-            "command": "openTabRenamer",
-            "keys": "f2"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "right"
-            },
-            "keys": "alt+shift+l"
-        },
-        {
-            "command": "unbound"
-        },
-        {
             "command": "find",
             "keys": "ctrl+shift+f"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -51,11 +25,18 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
+                "action": "resizePane",
+                "direction": "right"
             },
-            "keys": "alt+shift+d"
+            "keys": "alt+shift+l"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "alt+shift+h"
         },
         {
             "command": 
@@ -66,23 +47,21 @@
             "keys": "alt+shift+k"
         },
         {
-            "command": "openWindowRenamer"
+            "command": "paste",
+            "keys": "ctrl+v"
         },
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "up"
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
             },
-            "keys": "alt+k"
+            "keys": "alt+shift+d"
         },
         {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "alt+l"
+            "command": "unbound",
+            "keys": "ctrl+f2"
         },
         {
             "command": 
@@ -101,6 +80,10 @@
             "keys": "alt+h"
         },
         {
+            "command": "openTabRenamer",
+            "keys": "f2"
+        },
+        {
             "command": 
             {
                 "action": "resizePane",
@@ -111,66 +94,75 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "left"
+                "action": "nextTab"
             },
-            "keys": "alt+shift+h"
+            "keys": "ctrl+l"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+k"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+l"
         }
     ],
-    "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "experimental.rendering.forceFullRepaint": false,
     "experimental.rendering.software": false,
-    "firstWindowPreference": "defaultProfile",
-    "initialCols": 120,
-    "initialRows": 40,
     "launchMode": "maximized",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
         {
             "antialiasingMode": "cleartype",
-            "backgroundImage": "C:\\background\\27765-orujie_mujchina_ochki.jpg",
-            "backgroundImageOpacity": 0.20000000000000001,
+            "backgroundImage": "E:\\background\\54157-devushka_anime_gorod_megapolis_svechenie.jpg",
+            "backgroundImageAlignment": "center",
+            "backgroundImageOpacity": 0.15,
+            "backgroundImageStretchMode": "fill",
+            "bellStyle": "none",
             "colorScheme": "Tango Dark",
+            "cursorShape": "filledBox",
             "elevate": true,
             "font": 
             {
-                "face": "JetBrainsMono NF",
-                "size": 11,
+                "face": "JetBrainsMono Nerd Font",
+                "size": 14.0,
                 "weight": "normal"
             },
+            "opacity": 100,
             "padding": "0",
-            "suppressApplicationTitle": true
+            "startingDirectory": null,
+            "suppressApplicationTitle": true,
+            "useAcrylic": false,
+            "useAtlasEngine": false
         },
         "list": 
         [
             {
-                "backgroundImage": "C:\\Users\\gergert_im\\Pictures\\29743-risunok_fentezi_devushka.jpg",
-                "backgroundImageOpacity": 0.20000000000000001,
-                "colorScheme": "Tango Dark",
-                "font": 
-                {
-                    "face": "JetBrains Mono",
-                    "size": 11
-                },
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell",
-                "tabTitle": null
+                "name": "Windows PowerShell"
             },
             {
-                "backgroundImage": "desktopWallpaper",
-                "backgroundImageOpacity": 0.050000000000000003,
-                "colorScheme": "Solarized Dark",
-                "experimental.retroTerminalEffect": false,
-                "font": 
-                {
-                    "face": "JetBrains Mono",
-                    "size": 11
-                },
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "\u041a\u043e\u043c\u0430\u043d\u0434\u043d\u0430\u044f \u0441\u0442\u0440\u043e\u043a\u0430"
@@ -182,31 +174,54 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "colorScheme": "Tango Dark",
+                "antialiasingMode": "cleartype",
+                "colorScheme": 
+                {
+                    "light": "Solarized Dark"
+                },
+                "elevate": true,
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "padding": "0",
-                "scrollbarState": "visible",
-                "source": "Windows.Terminal.PowershellCore"
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": null
             },
             {
-                "guid": "{3aca9304-490f-5f21-b7b4-c14665e7a113}",
+                "guid": "{1ed3b070-acb0-5853-913e-c272b93c604f}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2017",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "cursorShape": "emptyBox",
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{33009b23-f9de-5917-8402-388e023a5297}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2019",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{05899174-4662-5a53-b65f-33fd21c9b6a6}",
+                "guid": "{560e495b-f457-5835-a6f6-0b7374465680}",
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2019",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "guid": "{23059eef-3307-5248-bfb6-c666aad4a805}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{222517f4-5064-5acf-b370-132cf42b83f8}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -418,6 +433,51 @@
             "selectionBackground": "#FFFFFF",
             "white": "#C0C0C0",
             "yellow": "#808000"
+        }
+    ],
+    "themes": 
+    [
+        {
+            "name": "legacyDark",
+            "tab": 
+            {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "useMica": false
+            }
+        },
+        {
+            "name": "legacyLight",
+            "tab": 
+            {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": 
+            {
+                "applicationTheme": "light",
+                "useMica": false
+            }
+        },
+        {
+            "name": "legacySystem",
+            "tab": 
+            {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": 
+            {
+                "applicationTheme": "system",
+                "useMica": false
+            }
         }
     ],
     "windowingBehavior": "useExisting"

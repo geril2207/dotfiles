@@ -122,3 +122,9 @@ start_docker ()
 {
   sudo systemctl start docker
 }
+
+
+set_brightness ()
+{
+  xrandr --output HDMI-A-0 --brightness $1
+}

@@ -199,7 +199,7 @@ bar {
 exec feh --bg-fill ~/Pictures/imgs/54157-devushka_anime_gorod_megapolis_svechenie.jpg
 
 exec "setxkbmap -layout us,ru"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec "setxkbmap -option 'grp:alt_caps_toggle'"
 
 
 

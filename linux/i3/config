@@ -28,7 +28,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 exec --no-startup-id ~/i3_startup.zsh
 
-exec_always --no-startup-id polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -224,7 +224,13 @@ assign [class="neovide"] 3
 for_window [class="Code"] focus
 assign [class="Code"] 3
 
+
 assign [class="TelegramDesktop"] 4
 assign [class="discord"] 4
 assign [class="DBeaver"] 4
+
+for_window [class="zoom"] layout tabbed
+for_window [class="discord"] layout tabbed
+for_window [class="TelegramDesktop"] layout tabbed
+for_window [class="DBeaver"] layout tabbed
 

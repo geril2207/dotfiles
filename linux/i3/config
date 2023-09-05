@@ -198,15 +198,16 @@ bar {
 
 exec feh --bg-fill ~/Pictures/imgs/54157-devushka_anime_gorod_megapolis_svechenie.jpg
 
+exec "setxkbmap -layout us,ru"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"
+
+
 
 for_window [class="neovide"] focus
 assign [class="neovide"] 3
 for_window [class="Code"] focus
 assign [class="Code"] 3
 
-for_window [class="TelegramDesktop"] workspace_layout tabbed
-for_window [class="discord"] workspace_layout tabbed
-for_window [class="DBeaver"] workspace_layout tabbed
 assign [class="TelegramDesktop"] 4
 assign [class="discord"] 4
 assign [class="DBeaver"] 4

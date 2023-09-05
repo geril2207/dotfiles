@@ -128,3 +128,9 @@ set_brightness ()
 {
   xrandr --output HDMI-A-0 --brightness $1
 }
+
+
+set_volume ()
+{
+  pactl set-sink-volume 0 $1%
+}

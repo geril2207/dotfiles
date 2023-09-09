@@ -118,14 +118,18 @@ alias nvide="neovide"
 
 
 
-start_docker ()
-{
+start_docker () {
   sudo systemctl start docker
 }
 
 
-set_brightness ()
-{
+stop_docker () {
+  sudo systemctl start docker
+  sudo systemctl start docker.socket
+}
+
+
+set_brightness () {
   xrandr --output HDMI-A-0 --brightness $1
 }
 

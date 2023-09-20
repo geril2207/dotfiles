@@ -23,10 +23,8 @@ font pango:monospace 8
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
-
-
-
-
+exec --no-startup-id feh --bg-fill ~/Pictures/imgs/54157-devushka_anime_gorod_megapolis_svechenie.jpg
+exec_always --no-startup-id "setxkbmap -layout us,ru"
 exec_always --no-startup-id setxkbmap -option 'grp:alt_caps_toggle'
 exec_always --no-startup-id xset r rate 250 40   
 exec_always --no-startup-id xinput --set-prop 11 164 0.85 0 0 0 0.85 0 0 0 1

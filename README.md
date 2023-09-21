@@ -5,5 +5,4 @@
 
 Dont forget to install
 
-- picom/compton
-- xclip
+- picom/compton xclip maim xdotool

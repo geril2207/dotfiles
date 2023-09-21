@@ -134,7 +134,13 @@ set_brightness () {
 }
 
 
-set_volume ()
-{
+set_volume () {
   pactl set-sink-volume 0 $1%
 }
+
+# bun completions
+[ -s "/home/ilya/.bun/_bun" ] && source "/home/ilya/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

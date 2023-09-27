@@ -28,7 +28,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id "setxkbmap -layout us,ru"
 exec_always --no-startup-id setxkbmap -option 'grp:alt_caps_toggle'
-exec_always --no-startup-id xset r rate 250 40   
+exec_always --no-startup-id xset r rate 200 40   
 exec_always --no-startup-id xinput --set-prop 11 164 0.85 0 0 0 0.85 0 0 0 1
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh

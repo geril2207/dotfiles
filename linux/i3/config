@@ -218,6 +218,7 @@ for_window [class="neovide"] focus
 assign [class="neovide"] 3
 
 for_window [class="Code"] focus
+for_window [class="Code"] border pixel 0
 assign [class="Code"] 3
 
 assign [class="TelegramDesktop"] 4

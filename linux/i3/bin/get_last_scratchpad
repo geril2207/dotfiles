@@ -1,0 +1,26 @@
+#!/bin/bash
+
+i3_layout=$(i3-msg -t get_tree)
+
+# Extract the focused scratchpad container
+scratchpad=$(echo "$i3_layout" | jq 'recurse(.nodes[]) | select(.name == "__i3_scratch")')
+
+
+echo $scratchpad > a.json
+
+
+
+
+
+last_window=$(echo "$scratchpad" | jq '.floating_nodes[-1].nodes[0]')
+
+last_window_id=$(echo "$last_window" | jq '.id')
+
+last_window_name=$(echo "$last_window" | jq '.window_properties.title')
+
+echo $last_window_id 
+echo $last_window_name
+
+if [ "$last_window_id" != "null" ]; then
+  i3-msg "[con_id=\"$last_window_id\"] scratchpad show; $1"
+fi

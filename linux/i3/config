@@ -22,7 +22,6 @@ focus_on_window_activation focus
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
@@ -34,7 +33,10 @@ exec_always --no-startup-id xinput --set-prop 11 164 0.85 0 0 0 0.85 0 0 0 1
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+
+
 include ./work.conf
+include ./scratchpad.conf
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -92,16 +94,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Control+h move left
+bindsym $mod+Control+j move down
+bindsym $mod+Control+k move up
+bindsym $mod+Control+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Control+Left move left
+bindsym $mod+Control+Down move down
+bindsym $mod+Control+Up move up
+bindsym $mod+Control+Right move right
 
 # split in horizontal orientation
 bindsym $mod+Shift+i split h
@@ -124,11 +126,6 @@ bindsym $mod+Shift+f floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-bindsym $mod+minus move scratchpad
-
-# Show the first scratchpad window
-bindsym $mod+Shift+minus scratchpad show; floating toggle
-bindsym $mod+Control+minus scratchpad show;
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -149,8 +146,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-bindsym $mod+Control+h workspace prev
-bindsym $mod+Control+l workspace next
+bindsym $mod+Shift+h workspace prev
+bindsym $mod+Shift+l workspace next
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -190,7 +187,6 @@ set $resize_delta 4
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
         bindsym h exec "i3-msg resize grow left $resize_delta px or $resize_delta ppt || i3-msg resize shrink right $resize_delta px or $resize_delta ppt"
         bindsym l exec "i3-msg resize grow right $resize_delta px or $resize_delta ppt || i3-msg resize shrink left $resize_delta px or $resize_delta ppt"
         bindsym j exec "i3-msg resize grow down $resize_delta px or $resize_delta ppt || i3-msg resize shrink up $resize_delta px or $resize_delta ppt"
@@ -209,8 +205,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
@@ -219,8 +213,6 @@ bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipb
 # bar {
 #         status_command i3status
 # }
-
-
 
 for_window [class="neovide"] focus
 assign [class="neovide"] 3

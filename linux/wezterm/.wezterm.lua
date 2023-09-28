@@ -33,6 +33,7 @@ config.keys = {
 
 config.colors = {
 	cursor_bg = "white",
+	cursor_border = "white",
 }
 
 return config

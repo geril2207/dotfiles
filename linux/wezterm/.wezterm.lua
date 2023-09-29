@@ -2,12 +2,19 @@ local wezterm = require("wezterm")
 local config = {}
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = 500 })
-config.font_size = 14
-config.window_background_opacity = 0.75
+config.font_size = 15.0
+config.window_background_opacity = 0.9
 config.bold_brightens_ansi_colors = false
 config.enable_tab_bar = false
 config.window_decorations = "NONE"
 config.color_scheme = "Tango (terminal.sexy)"
+
+config.window_background_gradient = {
+	colors = {
+		"#181825",
+		-- "#1e2030",
+	},
+}
 
 config.window_padding = {
 	left = 0,

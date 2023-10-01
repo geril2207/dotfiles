@@ -185,7 +185,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that)
 
 
-set $resize_delta 8
+set $resize_delta 5
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

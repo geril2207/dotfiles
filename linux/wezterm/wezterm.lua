@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = {}
 
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = 500 })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = 400 })
 config.font_size = 15.0
 config.window_background_opacity = 0.8
 config.bold_brightens_ansi_colors = false

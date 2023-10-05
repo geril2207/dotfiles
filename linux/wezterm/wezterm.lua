@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 return {
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = 300 }),
+	font = wezterm.font("JetBrainsMono Nerd Font", { weight = 400 }),
 	font_size = 15.0,
 	window_background_opacity = 0.8,
 	bold_brightens_ansi_colors = false,

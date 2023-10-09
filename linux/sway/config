@@ -36,6 +36,12 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 
+
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -145,7 +151,8 @@ include ./work.conf
 
 for_window [class="Code"] opacity 0.9
 for_window [app_id="Alacritty"] border pixel 0
-for_window [app_id="Alacritty"] opacity 0.9
+for_window [app_id="kitty"] border pixel 0
+for_window [app_id="org.wezfurlong.wezterm"] border pixel 0
 
 for_window [class="neovide"] focus
 assign [class="neovide"] 3

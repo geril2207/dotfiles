@@ -8,18 +8,11 @@ focus_on_window_activation focus
 output * background ~/Pictures/imgs/63109-anime_devushka_volk_pepelnyj.jpg fill
 
 input "type:keyboard" {
-    xkb_layout us,ru
-    xkb_options grp:alt_caps_toggle
+  xkb_layout us,ru
+  xkb_options grp:alt_caps_toggle
 
-    repeat_rate 40
-    repeat_delay 200
-}
-
-input "2:14:SynPS/2_Synaptics_TouchPad" {
-      dwt enabled
-      tap enabled
-      natural_scroll enabled
-      middle_emulation enabled
+  repeat_rate 40
+  repeat_delay 200
 }
 
 set $mod Mod4
@@ -150,6 +143,27 @@ include ./work.conf
 
 for_window [class="Code"] opacity 0.9
 for_window [app_id="Alacritty"] border pixel 0
+for_window [app_id="Alacritty"] opacity 0.9
+
+for_window [class="neovide"] focus
+assign [class="neovide"] 3
+
+for_window [class="Code"] focus
+for_window [class="Code"] border pixel 0
+assign [class="Code"] 3
+
+assign [class="TelegramDesktop"] 4
+for_window [class="TelegramDesktop"] layout tabbed
+
+assign [class="discord"] 4
+for_window [class="discord"] layout tabbed
+
+assign [class="DBeaver"] 4
+for_window [class="DBeaver"] layout tabbed
+
+assign [class="zoom"] 7
+for_window [class="zoom"] layout tabbed
 
 exec_always --no-startup-id ~/.config/waybar/launch.sh
+
 exec --no-startup-id "xrandr --output HDMI-A-1 --primary"

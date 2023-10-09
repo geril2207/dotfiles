@@ -4,10 +4,56 @@
   font-family:
     JetBrainsMono Nerd Font,
     monospace;
-  font-size: 13px;
+  font-size: 14px;
   color: @text;
 }
 
 window#waybar {
-  background: @surface0;
+  background: @base;
+}
+
+#workspaces button {
+  color: @text;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button:hover {
+  outline: none;
+  border-color: transparent;
+}
+
+#workspaces button:active {
+  outline: none;
+  background: none;
+}
+
+#workspaces button.focused {
+  border-bottom-color: @peach;
+}
+
+#workspaces button.urgent {
+  background: @yellow;
+}
+
+#workspaces button.hidden {
+  background: @overlay0;
+}
+
+#battery,
+#clock,
+#cpu,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#keyboard-state,
+#tray,
+#backlight,
+#language {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#tray {
+  border-right: none;
 }

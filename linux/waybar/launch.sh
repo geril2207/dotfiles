@@ -1,0 +1,4 @@
+
+pkill -f waybar
+
+waybar &

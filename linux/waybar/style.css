@@ -1,0 +1,13 @@
+@import "mocha.css";
+
+* {
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
+  font-size: 13px;
+  color: @text;
+}
+
+window#waybar {
+  background: @surface0;
+}

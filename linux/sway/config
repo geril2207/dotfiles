@@ -148,6 +148,7 @@ bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy
 
 # include /etc/sway/config.d/*
 include ./work.conf
+include ./personal.conf
 
 for_window [class="Code"] opacity 0.9
 for_window [app_id="Alacritty"] border pixel 0

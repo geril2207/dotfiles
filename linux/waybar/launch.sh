@@ -1,4 +1,0 @@
-
-pkill -f waybar
-
-waybar &

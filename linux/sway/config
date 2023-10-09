@@ -138,6 +138,8 @@ bindsym $mod+r mode "resize"
 bindcode $mod+Control+60 move workspace to output right
 bindcode $mod+Control+59 move workspace to output left
 
+bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy
+
 # include /etc/sway/config.d/*
 include ./work.conf
 

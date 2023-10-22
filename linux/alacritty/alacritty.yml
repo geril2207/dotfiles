@@ -170,7 +170,7 @@ font:
   #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 14
 # Offset is the extra space around each character. `offset.y` can be thought
 # of as modifying the line spacing, and `offset.x` as modifying the letter
 # spacing.
@@ -460,17 +460,17 @@ colors:
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
 
-#mouse:
-# Click settings
-#
-# The `double_click` and `triple_click` settings control the time
-# alacritty should wait for accepting multiple clicks as one double
-# or triple click.
-#double_click: { threshold: 300 }
-#triple_click: { threshold: 300 }
+mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
+  #double_click: { threshold: 300 }
+  #triple_click: { threshold: 300 }
 
-# If this is `true`, the cursor is temporarily hidden when typing.
-#hide_when_typing: false
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: true
 
 # Hints
 #

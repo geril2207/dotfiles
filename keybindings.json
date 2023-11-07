@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+shift+o",
@@ -14,17 +13,22 @@
     "command": "toggleVim"
   },
   {
-    "key": "f",
+    "key": "o",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "a",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus && !inputFocus"
   },
   {
-    "key": "d",
+    "key": "shift+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus && !inputFocus"
   },
   {
-    "key": "x",
+    "key": "d",
     "command": "deleteFile",
     "when": "explorerViewletFocus && !inputFocus"
   },
@@ -65,15 +69,34 @@
   {
     "key": "ctrl+n",
     "command": "selectNextCodeAction",
-    "when": "actionWidgetVisible"
+    "when": "codeActionMenuVisible"
   },
   {
     "key": "ctrl+p",
     "command": "selectPrevCodeAction",
-    "when": "actionWidgetVisible"
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
   },
   {
     "key": "ctrl+f1",
     "command": "eqMaterialThemeIcons.fixIcons"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.format"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "hideSuggestWidget",
+    "when": "suggestWidgetVisible && textInputFocus"
   }
 ]

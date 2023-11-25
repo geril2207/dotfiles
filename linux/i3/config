@@ -30,7 +30,7 @@ exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id setxkbmap -layout us,ru
 exec_always --no-startup-id setxkbmap -option 'grp:alt_caps_toggle'
-exec_always --no-startup-id xset r rate 200 40
+exec_always --no-startup-id xset r rate 175 50
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -53,8 +53,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -68,7 +68,8 @@ tiling_drag modifier titlebar
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -228,6 +229,7 @@ bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipb
 # }
 
 for_window [class="neovide"] focus
+for_window [class="neovide"] border pixel 0 
 assign [class="neovide"] 3
 
 for_window [class="Code"] focus
@@ -245,3 +247,4 @@ for_window [class="DBeaver"] layout tabbed
 
 assign [class="zoom"] 7
 for_window [class="zoom"] layout tabbed
+

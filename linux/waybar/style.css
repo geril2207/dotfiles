@@ -1,27 +1,15 @@
 @import "mocha.css";
 
 * {
-  font-family:
-    JetBrainsMono Nerd Font,
-    monospace;
-  color: @text;
-  border: none;
-  border-radius: 0;
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: none;
-  text-shadow: none;
-  transition-duration: 0s;
-}
-
-window#waybar {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 16px;
+  /* min-height: 0; */
   background: @base;
+  color: @text;
 }
 
 #workspaces button {
-  color: @text;
-  border-bottom: 4px solid transparent;
-  padding: 0px 5px;
+  border-bottom: 3px solid transparent;
 }
 
 #workspaces button:hover {
@@ -61,8 +49,4 @@ window#waybar {
 #language {
   padding-left: 8px;
   padding-right: 8px;
-}
-
-#tray {
-  border-right: none;
 }

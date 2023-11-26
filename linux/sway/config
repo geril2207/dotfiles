@@ -1,4 +1,4 @@
-default_border pixel 2
+default_border pixel 0
 hide_edge_borders --i3 smart
 font pango:JetBrainsMono 7
 focus_follows_mouse no

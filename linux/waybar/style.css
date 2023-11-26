@@ -2,6 +2,7 @@
 
 * {
   font-family: JetBrainsMono Nerd Font;
+  font-weight: 500;
   font-size: 16px;
   /* min-height: 0; */
   background: @base;
@@ -22,22 +23,25 @@
   border-bottom-color: transparent;
 }
 
-#workspaces button:active {
-  outline: none;
-  background: none;
-}
-
 #workspaces button.focused {
   border-bottom-color: @peach;
-  /* background: #373B41; */
 }
 
+#workspaces button.focused,
+#workspaces button.focused * {
+  background: @surface0;
+}
 #workspaces button.urgent {
   background: @yellow;
 }
 
 #workspaces button.hidden {
   background: @overlay0;
+}
+
+#workspaces button:active {
+  outline: none;
+  background: none;
 }
 
 #battery,

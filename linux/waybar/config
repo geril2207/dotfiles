@@ -3,7 +3,7 @@
     "height": 30, 
     "modules-left": ["sway/workspaces"],
     "modules-center": [], // "sway/window"
-    "modules-right": [ "pulseaudio", "network", "cpu", "memory", "keyboard-state", "sway/language", "battery", "clock", "tray"],
+    "modules-right": ["disk", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "sway/language", "battery", "clock", "tray"],
     "sway/workspaces": {
         "disable-scroll": true,
         "format-icons": {
@@ -20,6 +20,10 @@
     },
     "memory": {
         "format": "{}%  "
+    },
+    "disk" : {
+      "interval" : 30,
+      "format" : "{percentage_used}% 󰉋 "
     },
     "battery": {
         "states": {

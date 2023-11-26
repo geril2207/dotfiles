@@ -2,7 +2,7 @@
     "position": "bottom",
     "height": 30, 
     "modules-left": ["sway/workspaces"],
-    "modules-center": ["sway/window"],
+    "modules-center": [], // "sway/window"
     "modules-right": [ "pulseaudio", "network", "cpu", "memory", "keyboard-state", "sway/language", "battery", "clock", "tray"],
     "sway/workspaces": {
         "disable-scroll": true,
@@ -15,11 +15,11 @@
         "max-length": 50
     },
     "cpu": {
-        "format": " {usage:2}%",
+        "format": "{usage:2}%  ",
         "interval" : 3
     },
     "memory": {
-        "format": " {}%"
+        "format": "{}%  "
     },
     "battery": {
         "states": {
@@ -36,12 +36,12 @@
         "format-icons": [" ", " ", " ", " ", " "]
     },
     "network": {
-        "format-wifi": " {essid}",
+        "format-wifi": "{essid}  ",
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected"
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": ["", ""]
     },

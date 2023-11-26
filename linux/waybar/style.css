@@ -9,7 +9,10 @@
 }
 
 #workspaces button {
+  border: 0px;
+  border-radius: 0px;
   border-bottom: 3px solid transparent;
+  padding: 5px 8px;
 }
 
 #workspaces button:hover {
@@ -26,6 +29,7 @@
 
 #workspaces button.focused {
   border-bottom-color: @peach;
+  /* background: #373B41; */
 }
 
 #workspaces button.urgent {

@@ -1,18 +1,14 @@
 {
-    // "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar at the bottom of your screen
-    "height": 30, // Waybar height
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules
+    "position": "bottom",
+    "height": 30, 
     "modules-left": ["sway/workspaces"],
-      "modules-center": [],
-      "modules-right": [ "pulseaudio", "network", "cpu", "memory", "keyboard-state", "sway/language", "battery", "clock", "tray"],
+    "modules-center": ["sway/window"],
+    "modules-right": [ "pulseaudio", "network", "cpu", "memory", "keyboard-state", "sway/language", "battery", "clock", "tray"],
     "sway/workspaces": {
         "disable-scroll": true,
-        // "all-outputs": true,
         "format-icons": {
             "2": " ",
-            "1": " ",
+            "1": " "
         }
     },
     "sway/window": {
@@ -34,12 +30,11 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-good": "", // An empty format will hide the module
+        "format-good": "",
         "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format-wifi": " {essid}",
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected"
@@ -51,6 +46,6 @@
     },
     "clock" : {
     "interval" : 60,
-    "format": "{:%F %H:%M}",
+    "format": "{:%F %H:%M}"
   }
 }

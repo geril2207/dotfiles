@@ -15,11 +15,11 @@
         "max-length": 50
     },
     "cpu": {
-        "format": "{usage:2}%  ",
+        "format": "{usage:2}%  ",
         "interval" : 3
     },
     "memory": {
-        "format": "{}%  "
+        "format": "{}%  "
     },
     "battery": {
         "states": {

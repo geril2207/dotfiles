@@ -17,7 +17,7 @@ set $down j
 set $up k
 set $right l
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 bindsym $mod+Shift+q kill
 

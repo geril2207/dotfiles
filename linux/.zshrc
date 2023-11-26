@@ -119,8 +119,7 @@ alias ls="eza -la --group-directories-first --icons"
 alias lg="lazygit"
 alias ld="lazydocker"
 alias nvide="neovide"
-
-
+alias vim="nvim"
 
 start_docker () {
   sudo systemctl start docker

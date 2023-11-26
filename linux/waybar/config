@@ -15,7 +15,8 @@
         "max-length": 50
     },
     "cpu": {
-        "format": " {}%"
+        "format": " {usage:2}%",
+        "interval" : 3
     },
     "memory": {
         "format": " {}%"

@@ -28,14 +28,17 @@
 }
 
 #workspaces button.focused,
-#workspaces button.focused * {
+#workspaces button.focused label {
   background: @surface0;
 }
-#workspaces button.urgent {
+
+#workspaces button.urgent,
+#workspaces button.urgent label {
   background: @yellow;
 }
 
-#workspaces button.hidden {
+#workspaces button.hidden,
+#workspaces button.hidden label {
   background: @overlay0;
 }
 
@@ -46,7 +49,7 @@
 
 #battery,
 #clock,
-#cpu,
+/* #cpu, */
 #memory,
 #mode,
 #network,

@@ -18,6 +18,9 @@
         "format": "{usage:2}%  ",
         "interval" : 3
     },
+    "tray" : {
+        "spacing": 5
+    },
     "memory": {
         "format": "{}%  "
     },

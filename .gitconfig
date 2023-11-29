@@ -1,0 +1,9 @@
+[core]
+  editor=nvim
+
+[alias]
+  cm = commit -m
+  st = status -sb
+  sw = switch
+  ll = log --oneline
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

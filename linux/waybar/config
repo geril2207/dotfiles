@@ -3,7 +3,7 @@
     "height": 30, 
     "modules-left": ["sway/workspaces"],
     "modules-center": [], // "sway/window"
-    "modules-right": ["disk", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "sway/language", "battery", "clock", "tray"],
+    "modules-right": ["disk", "pulseaudio", "network", "cpu", "memory", "sway/language", "battery", "clock", "tray"],
     "sway/workspaces": {
         "disable-scroll": true,
         "format-icons": {
@@ -17,6 +17,15 @@
     "cpu": {
         "format": "{usage:2}%  ",
         "interval" : 3
+    },
+    "keyboard-state": {
+        "numlock": false,
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+              "locked": "CAPSLOCK",
+              "unlocked": " "
+        }
     },
     "tray" : {
         "spacing": 5

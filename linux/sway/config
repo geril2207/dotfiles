@@ -9,6 +9,7 @@ smart_borders yes
 output * background ~/Pictures/imgs/63109-anime_devushka_volk_pepelnyj.jpg fill
 
 include ./devices.conf
+include ./startup.conf
 
 set $mod Mod4
 
@@ -165,8 +166,3 @@ for_window [class="DBeaver"] layout tabbed
 
 assign [class="zoom"] 7
 for_window [class="zoom"] layout tabbed
-
-exec --no-startup-id waybar
-exec --no-startup-id mako
-
-exec --no-startup-id "xrandr --output HDMI-A-1 --primary"

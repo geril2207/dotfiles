@@ -13,7 +13,7 @@
   border: 0px;
   border-radius: 0px;
   border-bottom: 3px solid transparent;
-  padding: 5px 8px;
+  padding: 2px 8px;
 }
 
 #workspaces button:hover {
@@ -54,7 +54,6 @@
 #mode,
 #network,
 #pulseaudio,
-#keyboard-state,
 #tray,
 #backlight,
 #language {

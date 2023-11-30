@@ -1,2 +1,12 @@
+always_parse_args=true
+show_all=true
+hide_scroll=true
+insensitive=true
+prompt=
+term=kitty
+matching=fuzzy
+no_actions=true
+allow_images=true
+
 key_up=Control_L-p
 key_down=Control_L-n

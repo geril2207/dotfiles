@@ -4,7 +4,6 @@ hide_scroll=true
 insensitive=true
 prompt=
 term=kitty
-matching=fuzzy
 no_actions=true
 allow_images=true
 

@@ -127,8 +127,8 @@ start_docker () {
 
 
 stop_docker () {
-  sudo systemctl start docker
-  sudo systemctl start docker.socket
+  sudo systemctl stop docker
+  sudo systemctl stop docker.socket
 }
 
 

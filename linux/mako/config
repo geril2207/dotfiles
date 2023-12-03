@@ -1,9 +1,9 @@
-anchor=bottom-right
+anchor=top-right
 font=JetBrainsMono Nerd Font 10
 background-color=#24283b
 text-color=#c0caf5
 width=350
-margin=0,20,20
+margin=20,20
 padding=10
 border-size=2
 border-color=#414868

@@ -3,7 +3,7 @@ hide_edge_borders --i3 smart
 font pango:JetBrainsMono 7
 focus_follows_mouse no
 mouse_warping none
-focus_on_window_activation focus
+focus_on_window_activation urgent
 smart_borders yes
 
 output * background ~/Pictures/63109-anime_devushka_volk_pepelnyj.jpg fill

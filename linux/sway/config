@@ -167,3 +167,5 @@ for_window [class="DBeaver"] layout tabbed
 
 assign [class="zoom"] 7
 for_window [class="zoom"] layout tabbed
+
+include /etc/sway/config.d/*

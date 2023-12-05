@@ -60,10 +60,11 @@
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": "",
-        "format-icons": ["", ""]
+        "format-icons": ["", ""],
+        "scroll-step" : 2
     },
     "clock" : {
     "interval" : 30,
-    "format": "{:%F %H:%M}"
-  }
+    "format": "{:%F %H:%M}",
+    }
 }

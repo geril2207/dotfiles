@@ -21,7 +21,7 @@ set $down j
 set $up k
 set $right l
 
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec foot
 
 bindsym $mod+Shift+q kill
 
@@ -144,6 +144,11 @@ bindcode $mod+Control+60 move workspace to output right
 bindcode $mod+Control+59 move workspace to output left
 
 bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy
+
+for_window [app_id="foot"] {
+  border pixel 0
+  # opacity 0.8
+}
 
 for_window [app_id="Alacritty"] {
   border pixel 0

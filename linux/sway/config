@@ -145,8 +145,14 @@ bindcode $mod+Control+59 move workspace to output left
 
 bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy
 
-for_window [app_id="Alacritty"] border pixel 0
-for_window [app_id="kitty"] border pixel 0
+for_window [app_id="Alacritty"] {
+  border pixel 0
+  # opacity 0.9
+}
+for_window [app_id="kitty"] {
+  border pixel 0
+  # opacity 0.9
+}
 for_window [app_id="org.wezfurlong.wezterm"] border pixel 0
 
 for_window [class="neovide"] focus
@@ -157,6 +163,8 @@ for_window [class="Code"] {
   border pixel 0
   opacity 0.9
 }
+
+#vscode native wayland
 for_window [app_id="code-url-handler"] {
   focus
   border pixel 0

@@ -21,7 +21,10 @@ set $down j
 set $up k
 set $right l
 
-bindsym $mod+Return exec foot
+
+set $term foot
+
+bindsym $mod+Return exec $term
 
 bindsym $mod+Shift+q kill
 

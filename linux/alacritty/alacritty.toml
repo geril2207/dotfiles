@@ -1,0 +1,30 @@
+import = ["/home/geril/.config/alacritty/tango_dark.toml"]
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "#000000"
+
+[colors.primary]
+background = "#000000"
+
+[env]
+# TERM = "alacritty-direct"
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "none"
+opacity = 0.8

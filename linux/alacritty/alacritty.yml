@@ -16,7 +16,8 @@ import:
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 env:
-  TERM: xterm-256color
+  # TERM: xterm-256color
+  TERM: alacritty-direct
 
 window:
   # Window dimensions (changes require restart)
@@ -127,9 +128,10 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     family: JetBrainsMono Nerd Font
+    # family: Hack Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: SemiBold
+    style: Regular
   # Bold font face
   #bold:
   # Font family
@@ -164,7 +166,7 @@ font:
   #style: Bold Italic
 
   # Point size
-  size: 13
+  size: 14
 # Offset is the extra space around each character. `offset.y` can be thought
 # of as modifying the line spacing, and `offset.x` as modifying the letter
 # spacing.

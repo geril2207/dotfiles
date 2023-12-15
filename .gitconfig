@@ -7,6 +7,7 @@
 
 [alias]
   b = branch
+  co = checkout
   cm = commit -m
   st = status -sb
   sw = switch

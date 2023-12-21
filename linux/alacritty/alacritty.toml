@@ -1,4 +1,4 @@
-import = ["/home/geril/.config/alacritty/tango_dark.toml"]
+import = ["/home/ilya/.config/alacritty/tango_dark.toml"]
 
 [colors.cursor]
 cursor = "#ffffff"
@@ -8,13 +8,16 @@ text = "#000000"
 background = "#000000"
 
 [env]
+TERM= "alacritty"
 # TERM = "alacritty-direct"
 
 [font]
-size = 14
+# size = 14.0
+size = 15.8
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
+# family = "FiraCode Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]

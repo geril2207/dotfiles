@@ -5,6 +5,7 @@ function FindProxyForURL(_url, host) {
     /oaistatic/,
     /2ip/,
     /instagram/,
+    /linkedin/,
   ];
   const proxyUrl = "PROXY";
 

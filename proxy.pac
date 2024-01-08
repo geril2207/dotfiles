@@ -8,6 +8,8 @@ function FindProxyForURL(_url, host) {
     /linkedin/,
     /twitter/,
     /twimg/,
+    /indeed/,
+    /quora/,
   ];
   const proxyUrl = "PROXY";
 

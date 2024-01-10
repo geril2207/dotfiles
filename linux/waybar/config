@@ -1,7 +1,7 @@
 {
     "position": "bottom",
     "height": 30, 
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [], // "sway/window"
     "modules-right": ["disk", "pulseaudio", "network", "cpu", "memory", "sway/language", "battery", "clock", "tray"],
     "sway/workspaces": {

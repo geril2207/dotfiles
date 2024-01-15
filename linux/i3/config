@@ -18,7 +18,7 @@ set $mod Mod4
 font pango:JetBrainsMono 7
 focus_follows_mouse no
 mouse_warping none
-focus_on_window_activation focus
+focus_on_window_activation smart
 default_border pixel 2
 
 include ./devices.conf
@@ -207,6 +207,7 @@ bindsym $mod+Ctrl+less move workspace to output left
 
 for_window [class="kitty"] border pixel 0
 for_window [class="Alacritty"] border pixel 0
+for_window [class="st-256color"] border pixel 0
 
 for_window [class="neovide"] focus
 for_window [class="neovide"] border pixel 0 

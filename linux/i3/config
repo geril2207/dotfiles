@@ -69,6 +69,9 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
+bindsym --whole-window --border $mod+button5 focus left
+bindsym --whole-window --border $mod+button4 focus right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down

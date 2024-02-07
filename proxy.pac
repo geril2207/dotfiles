@@ -10,6 +10,9 @@ function FindProxyForURL(_url, host) {
     /twimg/,
     /indeed/,
     /quora/,
+    /deepstate/,
+    /spotify/,
+    /nestjs/
   ];
   const proxyUrl = "PROXY";
 

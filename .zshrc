@@ -133,7 +133,7 @@ stop_docker () {
 
 
 set_brightness () {
-  xrandr --output HDMI-A-0 --brightness $1
+  xrandr --output eDP --brightness $1
 }
 
 
@@ -148,3 +148,6 @@ set_volume () {
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=/opt/go/bin:~/go/bin:$PATH
+
+# opam configuration
+[[ ! -r /home/ilya/.opam/opam-init/init.zsh ]] || source /home/ilya/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

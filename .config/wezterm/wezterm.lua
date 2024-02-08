@@ -8,6 +8,7 @@ return {
 	enable_tab_bar = false,
 	window_decorations = "NONE",
 	color_scheme = "Tango (terminal.sexy)",
+  term = "wezterm",
 	-- adjust_window_size_when_changing_font_size = false,
 
 	colors = {

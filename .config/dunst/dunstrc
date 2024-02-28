@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = (0, 450)
 
     # The maximum height of a single notification, excluding the frame.
     height = 200
@@ -39,13 +39,13 @@
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 3
+    notification_limit = 2
 
     ### Progress bar ###
 
     # Turn on the progess bar. It appears when a progress hint is passed with
     # for example dunstify -h int:value:12
-    progress_bar = true
+    progress_bar = false
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
@@ -118,7 +118,7 @@
 
     ### Text ###
 
-    font = Monospace 13
+    font = JetBrainsMono Nerd Font 13
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

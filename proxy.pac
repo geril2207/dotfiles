@@ -1,7 +1,7 @@
 function FindProxyForURL(_url, host) {
   const urlsToProxy = [
     /chess\.com/,
-    /chat\.openai\.com/,
+    /openai/,
     /oaistatic/,
     /2ip/,
     /instagram/,

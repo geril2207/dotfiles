@@ -5,6 +5,15 @@
 [core]
   editor=nvim
 
+[pull]
+	rebase = true
+
+[init]
+	defaultBranch = main
+
+[credential]
+	helper = store
+
 [alias]
   b = branch
   co = checkout
@@ -25,9 +34,3 @@
 
   w = worktree
   wl = w list
-
-[init]
-	defaultBranch = main
-
-[credential]
-	helper = store

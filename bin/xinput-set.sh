@@ -27,7 +27,6 @@ do
 
     for prop in $props
     do
-        echo $prop
         xinput set-prop $dev $prop $VAL 
     done 
 done

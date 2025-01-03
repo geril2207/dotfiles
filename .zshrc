@@ -152,3 +152,5 @@ export PATH=/opt/go/bin:~/go/bin:$PATH
 
 # opam configuration
 [[ ! -r /home/ilya/.opam/opam-init/init.zsh ]] || source /home/ilya/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

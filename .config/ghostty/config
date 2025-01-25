@@ -1,0 +1,13 @@
+font-family = CommitMono
+font-size = 14
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-style-blink = false 
+mouse-hide-while-typing = true
+window-decoration=false
+theme = "Builtin Tango Dark"
+background = #24273a
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+window-vsync = true
+desktop-notifications = false

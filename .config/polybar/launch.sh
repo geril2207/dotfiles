@@ -28,7 +28,7 @@ if [ $PRIMARY ]; then
   # Launch on primary monitor
   MONITOR=$PRIMARY polybar --reload -c $BAR_CONFIG $BAR_NAME &
 
-  sleep 1
+  sleep 0.1
 fi
 
 # Launch on all other monitors

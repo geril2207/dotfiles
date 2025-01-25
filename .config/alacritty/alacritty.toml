@@ -13,12 +13,12 @@ TERM= "alacritty"
 
 [font]
 # size = 14.0
-size = 15.8
+size = 18
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 # family = "FiraCode Nerd Font"
-style = "Regular"
+style = "Medium"
 
 [[keyboard.bindings]]
 action = "Paste"

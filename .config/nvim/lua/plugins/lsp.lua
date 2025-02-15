@@ -156,7 +156,7 @@ return {
 	{
 		"nvimtools/none-ls.nvim",
 		event = "VeryLazy",
-		dev = true,
+		dev = false,
 		config = function()
 			local null_ls = require("null-ls")
 
@@ -181,6 +181,26 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("mason").setup({
+				ensure_installed = {
+					"stylua",
+					"astro",
+					"bashls",
+					"clangd",
+					"cssls",
+					"cssmodules_ls",
+					"dockerls",
+					"emmet_ls",
+					"eslint",
+					"html",
+					"jsonls",
+					"lua_ls",
+					"prettierd",
+					"prismals",
+					"stylelint_lsp",
+					"tailwindcss",
+					"vtsls",
+					"yamlls",
+				},
 				ui = {
 					icons = {
 						package_installed = "✓",
@@ -415,7 +435,7 @@ return {
 					},
 				},
 			},
-			{ "ray-x/lsp_signature.nvim", dev = true },
+			{ "ray-x/lsp_signature.nvim", dev = false },
 			"b0o/schemastore.nvim",
 		},
 	},

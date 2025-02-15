@@ -237,9 +237,24 @@ return {
 				},
 				vtsls = {
 					root_dir = get_cwd,
+					filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 					settings = {
 						typescript = { format = { enable = false } },
 						javascript = { format = { enable = false } },
+						vtsls = {
+							tsserver = {
+								globalPlugins = {
+									{
+										name = "@vue/typescript-plugin",
+										location = require("mason-registry").get_package("vue-language-server"):get_install_path()
+											.. "/node_modules/@vue/language-server",
+										languages = { "vue" },
+										configNamespace = "typescript",
+										enableForWorkspaceTypeScriptVersions = true,
+									},
+								},
+							},
+						},
 					},
 				},
 				bashls = {

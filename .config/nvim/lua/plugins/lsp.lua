@@ -435,7 +435,7 @@ return {
 					},
 				},
 			},
-			{ "ray-x/lsp_signature.nvim", dev = false },
+			{ "geril2207/lsp_signature.nvim", dev = false },
 			"b0o/schemastore.nvim",
 		},
 	},

@@ -78,12 +78,10 @@ return {
 					})
 				),
 			}
-
-			luasnip.add_snippets("typescriptreact", js_snippets)
-			luasnip.add_snippets("javascriptreact", js_snippets)
-			luasnip.add_snippets("typescript", js_snippets)
-			luasnip.add_snippets("javascript", js_snippets)
-			luasnip.add_snippets("astro", js_snippets)
+			local add_to = { "typescriptreact", "javascriptreact", "typescript", "javascript", "astro", "vue", "svelte" }
+			for _, lang in ipairs(add_to) do
+				luasnip.add_snippets(lang, js_snippets)
+			end
 		end,
 		dependencies = {
 

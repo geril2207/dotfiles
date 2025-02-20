@@ -62,6 +62,11 @@ map_tbl({
 		["<leader>fp"] = mcmd("Telescope resume"),
 		["<C-p>"] = mcmd("Telescope find_files"),
 		["<leader>fz"] = mcmd("Telescope live_grep"),
+		["<leader>fx"] = function()
+			require("telescope.builtin").grep_string({
+				search = vim.fn.input("Grep: "),
+			})
+		end,
 		["<leader>fl"] = mcmd("Telescope grep_string"),
 		["<leader>fb"] = mcmd("Telescope buffers"),
 		["<leader>fg"] = mcmd("Telescope git_files"),

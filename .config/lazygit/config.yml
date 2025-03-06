@@ -7,3 +7,6 @@ gui:
   showBottomLine: false
   border: rounded
   nerdFontsVersion: "3"
+
+git:
+  fetchAll: false

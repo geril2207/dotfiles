@@ -302,9 +302,15 @@ return {
 						},
 					},
 				},
-				clangd = {},
+				clangd = {
+					cmd = {
+						"clangd",
+						"--clang-tidy",
+						"--function-arg-placeholders=false",
+					},
+				},
 				tailwindcss = {
-					disabled = true,
+					disabled = false,
 				},
 				eslint = {
 					settings = { format = false },

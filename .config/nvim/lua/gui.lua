@@ -1,7 +1,8 @@
 ---@diagnostic disable: inject-field, undefined-field
 -- if nvim-qt, i can use fvim, neovide and nvy
-FontSize = 14
-FontFamily = "JetBrainsMono Nerd Font"
+FontSize = 16
+-- FontFamily = "JetBrainsMono Nerd Font"
+FontFamily = "CommitMono"
 
 local utils = require("utils")
 local map_utils = require("utils.map")
@@ -44,12 +45,12 @@ if not utils.is_goneovim then
 end
 
 if vim.g.neovide then
-	-- vim.g.neovide_scroll_animation_length = 0
-	-- vim.g.neovide_cursor_animate_in_insert_mode = false
+	vim.g.neovide_refresh_rate = 75
+	vim.g.neovide_cursor_animate_in_insert_mode = false
 	-- vim.g.neovide_cursor_trail_size = 0
 	-- vim.g.neovide_scroll_animation_length = 0
 	-- vim.g.neovide_cursor_antialiasing = false
-	vim.g.neovide_fullscreen = false
+	-- vim.g.neovide_fullscreen = false
 	-- vim.g.neovide_input_use_logo = 0 -- enable use of the logo (cmd) key
 	map_tbl({
 		i = {

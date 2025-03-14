@@ -1,10 +1,5 @@
 zstyle ':omz:update' mode disabled
-# If you come from bash you might have to change your $PATH.
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-
-export PATH=~/.local/bin:${PATH}
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -145,10 +140,6 @@ set_volume () {
 # bun completions
 [ -s "/home/ilya/.bun/_bun" ] && source "/home/ilya/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH=/opt/go/bin:~/go/bin:$PATH
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \

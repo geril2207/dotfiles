@@ -233,6 +233,7 @@ return {
 						typescript = { format = { enable = false } },
 						javascript = { format = { enable = false } },
 						vtsls = {
+							autoUseWorkspaceTsdk = true,
 							tsserver = {
 								globalPlugins = {
 									{

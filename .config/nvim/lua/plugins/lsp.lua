@@ -45,12 +45,6 @@ local get_cwd = function()
 	return vim.uv.cwd()
 end
 
-local function format_file()
-	vim.lsp.buf.format({
-		async = true,
-	})
-end
-
 -- local methods = vim.lsp.protocol.Methods
 local map_utils = require("utils.map")
 local map_tbl = map_utils.map_tbl
@@ -139,8 +133,6 @@ local on_attach = function(client, bufnr)
 			["[e"] = { vim.diagnostic.goto_prev, bufopts },
 			["<leader>r"] = { vim.lsp.buf.rename, bufopts },
 			["]e"] = { vim.diagnostic.goto_next, bufopts },
-			["<A-F>"] = { format_file, bufopts },
-			["<leader>f"] = { format_file, bufopts },
 			["<leader>la"] = { vim.lsp.buf.code_action, bufopts },
 
 			["<leader>ld"] = function()
@@ -154,28 +146,6 @@ local on_attach = function(client, bufnr)
 end
 
 return {
-	{
-		"nvimtools/none-ls.nvim",
-		event = "VeryLazy",
-		dev = false,
-		config = function()
-			local null_ls = require("null-ls")
-
-			null_ls.setup({
-				root_dir = get_cwd,
-				diagnostic_config = diagnostic_config,
-				update_in_insert = false,
-				sources = {
-					null_ls.builtins.formatting.black,
-					-- null_ls.builtins.formatting.prettier,
-					null_ls.builtins.formatting.prettierd,
-					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.sqlfmt,
-					null_ls.builtins.formatting.ocamlformat,
-				},
-			})
-		end,
-	},
 	{
 		"neovim/nvim-lspconfig",
 		lazy = true,

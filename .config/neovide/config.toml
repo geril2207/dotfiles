@@ -1,1 +1,12 @@
 vsync = false
+
+
+[font]
+size = 16
+
+[[font.normal]]
+family = "CommitMono"
+
+# You can set a different font for fallback
+[[font.normal]]
+family = "Symbols Nerd Font Mono"

@@ -1,4 +1,3 @@
-import = ["/home/ilya/.config/alacritty/tango_dark.toml"]
 
 [colors.cursor]
 cursor = "#ffffff"
@@ -13,12 +12,13 @@ TERM= "alacritty"
 
 [font]
 # size = 14.0
-size = 18
+size = 16
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 # family = "FiraCode Nerd Font"
-style = "Medium"
+# family = "CommitMono Nerd Font"
+# style = "Medium"
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -29,5 +29,8 @@ mods = "Control"
 hide_when_typing = true
 
 [window]
-decorations = "none"
-opacity = 0.8
+# decorations = "none"
+# opacity = 0.8
+
+[general]
+import = ["/home/ilya/.config/alacritty/tango_dark.toml"]

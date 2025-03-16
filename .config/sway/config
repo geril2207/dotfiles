@@ -9,7 +9,7 @@ smart_borders yes
 
 # gaps inner 10
 
-output * background ~/Pictures/63109-anime_devushka_volk_pepelnyj.jpg fill
+#output * background ~/Pictures/63109-anime_devushka_volk_pepelnyj.jpg fill
 
 include ./devices.conf
 include ./startup.conf

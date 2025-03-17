@@ -2,7 +2,7 @@
 
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-size: 18px;
+  font-size: 17px;
   min-height: 0;
 }
 
@@ -11,20 +11,36 @@
   color: @text;
 }
 
-#workspaces button {
-  color: @lavender;
-  margin: 0;
-  padding: 0px 8px;
-  border-radius: 0;
+#workspaces {
+  margin: 5px 0px;
 }
+
+#workspaces button,
+#workspaces button:hover {
+  margin: 0;
+  border-radius: 0px;
+  border: none;
+  background: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+
+  padding: 0px 8px;
+  color: @lavender;
+  border-bottom: 4px solid transparent;
+}
+
+/* #workspaces button:first-child { */
+/*   border-radius: 1rem 0px 0px 1rem; */
+/* } */
+/**/
+/* #workspaces button:last-child { */
+/*   border-radius: 0px 1rem 1rem 0px; */
+/* } */
 
 #workspaces button.focused {
-  color: @base;
-  background: @peach;
-}
-
-#workspaces button:hover {
-  color: @sapphire;
+  /* color: @base; */
+  border-bottom: 4px solid @peach;
+  /* background: @peach; */
 }
 
 #workspaces button.urgent {
@@ -43,7 +59,9 @@
 #cpu,
 #memory,
 #language,
-#disk {
+#disk,
+#mode,
+#keyboard-state {
   background-color: @surface0;
   padding: 3px 10px;
   margin: 5px 0px;
@@ -64,24 +82,26 @@
   color: @red;
 }
 
+#pulseaudio {
+  color: @maroon;
+}
+
 #pulseaudio,
 #disk {
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
 }
 
-#pulseaudio {
-  color: @maroon;
-}
-
 #clock,
 #cpu {
   border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
 }
 
 #clock {
   color: @blue;
+  margin-right: 1rem;
+  /* border-radius: 1rem; */
+  /* margin-right: 1rem; */
 }
 
 #custom-music {
@@ -92,4 +112,11 @@
 #tray {
   margin-right: 1rem;
   border-radius: 1rem;
+}
+
+#mode {
+  border-radius: 1rem;
+  margin-left: 1rem;
+  background-color: @yellow;
+  color: @base;
 }

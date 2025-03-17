@@ -47,6 +47,9 @@ return {
 					"bash",
 					"jsdoc",
 					"yaml",
+					"vue",
+					"cpp",
+					"c",
 				},
 				sync_install = false,
 				indent = {

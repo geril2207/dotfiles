@@ -1,4 +1,4 @@
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 LOCAL_BIN=$HOME/.local/bin
 CARGO_BIN=$HOME/.cargo/bin

@@ -8,3 +8,4 @@ BUN_BIN=$HOME/.bun/bin
 
 export PATH=$LOCAL_BIN:$CARGO_BIN:$LOCAL_GO_BIN:$GO_BIN:$BUN_BIN:$PATH
 export LANG="en_GB.UTF-8"
+# export QT_QPA_PLATFORM=wayland

@@ -2,61 +2,94 @@
 
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-weight: 500;
-  font-size: 16px;
-  /* min-height: 0; */
+  font-size: 18px;
+  min-height: 0;
+}
+
+#waybar {
   background: @base;
   color: @text;
 }
 
 #workspaces button {
-  border: 0px;
-  border-radius: 0px;
-  border-bottom: 3px solid transparent;
-  padding: 2px 8px;
-}
-
-#workspaces button:hover {
-  outline: none;
-  border-color: transparent;
-  background: none;
-  border-bottom-color: transparent;
+  color: @lavender;
+  margin: 0;
+  padding: 0px 8px;
+  border-radius: 0;
 }
 
 #workspaces button.focused {
-  border-bottom-color: @peach;
+  color: @base;
+  background: @peach;
 }
 
-#workspaces button.focused,
-#workspaces button.focused label {
-  background: @surface0;
+#workspaces button:hover {
+  color: @sapphire;
 }
 
-#workspaces button.urgent,
-#workspaces button.urgent label {
-  background: @yellow;
+#workspaces button.urgent {
+  background-color: @red;
+  color: @base;
 }
 
-#workspaces button.hidden,
-#workspaces button.hidden label {
-  background: @overlay0;
-}
-
-#workspaces button:active {
-  outline: none;
-  background: none;
-}
-
-#battery,
-#clock,
-/* #cpu, */
-#memory,
-#mode,
-#network,
-#pulseaudio,
+#custom-music,
 #tray,
 #backlight,
-#language {
-  padding-left: 8px;
-  padding-right: 8px;
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power,
+#cpu,
+#memory,
+#language,
+#disk {
+  background-color: @surface0;
+  padding: 3px 10px;
+  margin: 5px 0px;
+}
+
+#memory,
+#cpu,
+#disk,
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @yellow;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#pulseaudio,
+#disk {
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#pulseaudio {
+  color: @maroon;
+}
+
+#clock,
+#cpu {
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#clock {
+  color: @blue;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
 }

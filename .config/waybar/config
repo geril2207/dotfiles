@@ -1,70 +1,80 @@
 {
-    "position": "bottom",
-    "height": 30, 
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": [], // "sway/window"
-    "modules-right": ["disk", "pulseaudio", "network", "cpu", "memory", "sway/language", "battery", "clock", "tray"],
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "format-icons": {
-            "1": " ",
-            "2": " "
-        }
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "height": 40,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["disk", "memory", "cpu", "pulseaudio", "battery", "sway/language", "clock", "tray"],
+    "tray": {
+        "wicon-size": 18,
+        "spacing": 10
     },
-    "sway/window": {
-        "max-length": 50
-    },
-    "cpu": {
-        "format": "{usage:2}%  ",
-        "interval" : 1
-    },
-    "keyboard-state": {
-        "numlock": false,
-        "capslock": true,
-        "format": "{icon}",
-        "format-icons": {
-              "locked": "CAPSLOCK",
-              "unlocked": " "
-        }
-    },
-    "tray" : {
-        "spacing": 5
-    },
-    "memory": {
-        "format": "{}%  ",
-        "interval": 1
-    },
+
     "disk" : {
       "interval" : 30,
       "format" : "{percentage_used}% 󰉋 "
     },
+
+    "cpu": {
+        "format": " {usage:2}% ",
+        "interval" : 1
+    },
+
+    "memory": {
+        "format": " {}%",
+        "interval": 1
+    },
+
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+
+    "clock": {
+        "timezone": "Europe/Moscow",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": " {:%d/%m/%Y}",
+        "format": " {:%H:%M}"
+    },
+
     "battery": {
         "states": {
-            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-good": "",
-        "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-alt": "{icon}",
+        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
     },
-    "network": {
-        "format-wifi": "{essid}  ",
-        "format-ethernet": " {ifname}",
-        "format-disconnected": "⚠ Disconnected"
-    },
+
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": ["", ""],
-        "scroll-step" : 2
+        "scroll-step": 2, 
+        "format": "{icon} {volume:2}%",
+        "format-muted": "  0%",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
     },
-    "clock" : {
-    "interval" : 30,
-    "format": "{:%F %H:%M}",
+
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "襤"
     }
 }

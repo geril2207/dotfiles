@@ -7,7 +7,6 @@ window {
   margin: 0px;
   border: 5px solid #1e1e2e;
   background-color: #cdd6f4;
-  border-radius: 15px;
 }
 
 #input {
@@ -19,7 +18,6 @@ window {
   font-weight: bold;
   background-color: #1e1e2e;
   outline: none;
-  border-radius: 15px;
   margin: 10px;
   margin-bottom: 2px;
 }
@@ -33,12 +31,10 @@ window {
   color: #cdd6f4;
   font-weight: bold;
   background-color: #1e1e2e;
-  border-radius: 15px;
 }
 
 #outer-box {
   border: none;
-  border-radius: 15px;
   background-color: #1e1e2e;
 }
 

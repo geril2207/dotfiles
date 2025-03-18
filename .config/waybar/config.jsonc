@@ -1,9 +1,8 @@
 {
-  "layer": "top", // Waybar at top layer
+  "layer": "top",
   "position": "bottom", // Waybar position (top|bottom|left|right)
-  // "width": 1280, // Waybar width
-  // Choose the order of the modules
   "height": 40,
+
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["custom/music"],
   "modules-right": [
@@ -16,10 +15,12 @@
     "clock",
     "tray",
   ],
+
   "tray": {
-    "wicon-size": 14,
-    "spacing": 10,
+    "icon-size": 18,
+    "spacing": 5,
   },
+
   "sway/mode": {
     "format": "{}",
     "max-length": 50,
@@ -31,7 +32,7 @@
   },
 
   "cpu": {
-    "format": " {usage:2}% ",
+    "format": " {usage:2}%",
     "interval": 3,
   },
 
@@ -83,8 +84,8 @@
 
   "pulseaudio": {
     "scroll-step": 2,
-    "format": "{icon} {volume:2}%",
-    "format-muted": "  0%",
+    "format": "{icon}{volume:2}%",
+    "format-muted": " 0%",
     "format-icons": {
       "default": [" ", " ", " "],
     },
@@ -97,6 +98,7 @@
     "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
     "format": "",
   },
+
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout &",

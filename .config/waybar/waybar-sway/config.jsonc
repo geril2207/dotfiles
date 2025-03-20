@@ -50,11 +50,11 @@
   },
 
   "custom/music": {
-    "format": " {}",
+    "format": "{}",
     "escape": true,
     "interval": 5,
     "tooltip": false,
-    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+    "exec": "player_title.sh",
     "on-click": "playerctl play-pause",
     "max-length": 50,
   },

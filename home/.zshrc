@@ -150,5 +150,5 @@ export FZF_DEFAULT_OPTS=" \
 # opam configuration
 [[ ! -r /home/ilya/.opam/opam-init/init.zsh ]] || source /home/ilya/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-
+[ -f ~/.profile ] && source ~/.profile
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

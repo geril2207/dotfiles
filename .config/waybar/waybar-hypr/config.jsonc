@@ -3,7 +3,7 @@
   "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 40,
 
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/music"],
   "modules-right": [
     "disk",
@@ -11,7 +11,7 @@
     "cpu",
     "pulseaudio",
     "battery",
-    "sway/language",
+    "hyprland/language",
     "clock",
     "tray",
   ],
@@ -19,11 +19,6 @@
   "tray": {
     "icon-size": 18,
     "spacing": 5,
-  },
-
-  "sway/mode": {
-    "format": "{}",
-    "max-length": 50,
   },
 
   "disk": {
@@ -91,17 +86,5 @@
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-right": "pavucontrol",
-  },
-
-  "custom/lock": {
-    "tooltip": false,
-    "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
-    "format": "",
-  },
-
-  "custom/power": {
-    "tooltip": false,
-    "on-click": "wlogout &",
-    "format": "襤",
   },
 }

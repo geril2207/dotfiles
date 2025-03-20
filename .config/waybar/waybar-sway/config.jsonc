@@ -1,0 +1,95 @@
+{
+  "layer": "top",
+  "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 40,
+
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["custom/music"],
+  "modules-right": [
+    "disk",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "battery",
+    "sway/language",
+    "clock",
+    "tray",
+  ],
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5,
+  },
+
+  "sway/mode": {
+    "format": "{}",
+    "max-length": 50,
+  },
+
+  "disk": {
+    "interval": 30,
+    "format": "󰉋 {percentage_used}%",
+  },
+
+  "cpu": {
+    "format": " {usage:2}%",
+    "interval": 3,
+  },
+
+  "memory": {
+    "format": " {}%",
+    "interval": 3,
+  },
+
+  "custom/music": {
+    "format": " {}",
+    "escape": true,
+    "interval": 5,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+    "on-click": "playerctl play-pause",
+    "max-length": 50,
+  },
+
+  "clock": {
+    "timezone": "Europe/Moscow",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "󰃭 {:%d-%m-%Y %H:%M}",
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-alt": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ],
+  },
+
+  "pulseaudio": {
+    "scroll-step": 2,
+    "format": "{icon}{volume:2}%",
+    "format-muted": " 0%",
+    "format-icons": {
+      "default": [" ", " ", " "],
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+  },
+}

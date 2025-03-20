@@ -51,10 +51,9 @@
 
   "custom/music": {
     "format": "{}",
-    "escape": true,
     "interval": 5,
     "tooltip": false,
-    "exec": "player_title.sh",
+    "exec": "~/.local/bin/player_title.sh",
     "on-click": "playerctl play-pause",
     "max-length": 50,
   },

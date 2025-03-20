@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 40,
+  "height": 35,
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/music"],
@@ -9,12 +9,20 @@
     "disk",
     "memory",
     "cpu",
+    "network",
     "pulseaudio",
     "battery",
     "hyprland/language",
     "clock",
     "tray",
   ],
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {essid}",
+    "format-ethernet": " 󰊗 {ipaddr}/{cidr}",
+    "format-disconnected": "Disconnected",
+  },
 
   "tray": {
     "icon-size": 18,

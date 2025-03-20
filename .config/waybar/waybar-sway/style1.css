@@ -27,6 +27,7 @@
 
 #workspaces button.focused {
   border-bottom: 4px solid @peach;
+  background: #373b41;
 }
 
 #workspaces button.urgent {
@@ -46,7 +47,8 @@
 #memory,
 #language,
 #disk,
-#mode {
+#mode,
+#network {
   padding: 0;
   margin: 0 10px;
 }
@@ -58,7 +60,8 @@
 #memory,
 #cpu,
 #disk,
-#battery {
+#battery,
+#network {
   color: @green;
 }
 

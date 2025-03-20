@@ -13,3 +13,4 @@ keyword:okko
 keyword:playfamily
 keyword:.ru
 keyword:valgrind
+keyword:boosty

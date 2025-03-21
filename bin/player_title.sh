@@ -1,9 +1,9 @@
 #!/bin/bash
 
 output=$(playerctl metadata --format='{{ artist }} - {{ title }}')
-output=$(echo "$output" | xargs)
+output=$(xargs <<<"$output")
 
-if [[ "$output" == "No players found" ]]; then
+if [[ "$output" == "No players found" || "$output" == "No player could handle this command" ]]; then
   exit 0
 fi
 

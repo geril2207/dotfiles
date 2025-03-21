@@ -72,6 +72,7 @@
 
 #language {
   color: @rosewater;
+  min-width: 20px;
 }
 
 #battery.warning:not(.charging) {

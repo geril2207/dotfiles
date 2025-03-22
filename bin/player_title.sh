@@ -1,7 +1,8 @@
 #!/bin/bash
 
 output=$(playerctl metadata --format='{{ artist }} - {{ title }}' 2>/dev/null)
-output=$(xargs <<<"$output")
+output="${output#"${output%%[![:space:]]*}"}" # trim leading spaces
+output="${output%"${output##*[![:space:]]}"}" # trim trailing spaces
 
 if [[ "$output" == "No players found" || "$output" == "No player could handle this command" ]]; then
   exit 0

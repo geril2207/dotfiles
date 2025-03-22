@@ -4,6 +4,7 @@ vim.filetype.add({
 	},
 	extension = {
 		mdx = "jsx",
+		ftl = "ftl",
 	},
 })
 

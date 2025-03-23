@@ -1,0 +1,28 @@
+[
+  {
+    "action": "hijack-dns",
+    "protocol": "dns"
+  },
+  {
+    "action": "route",
+    "domain_keyword": [
+      "twitch",
+      "vk",
+      "okcdn",
+      "gstatic",
+      "kinopoisk",
+      "yandex",
+      "imgur",
+      "gemotest",
+      "ttv",
+      "lexicom",
+      "invitro",
+      "okko",
+      "playfamily",
+      ".ru",
+      "valgrind",
+      "boosty"
+    ],
+    "outbound": "direct"
+  }
+]

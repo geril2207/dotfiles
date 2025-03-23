@@ -61,7 +61,7 @@
   "clock": {
     "timezone": "Europe/Moscow",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "󰃭 {:%d-%m-%Y %H:%M}",
+    "format": "{:%d-%m-%Y %H:%M}", // 󰃭
   },
 
   "battery": {

@@ -31,6 +31,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec wofi --show drun
+# bindsym $mod+Shift+d exec wofi --show run
+# bindsym $mod+Shift+d exec bemenu-run -i --tb='#222222' --tf='#bbbbbb' --fb='#222222' --nf='#bbbbbb' --hb='#005577' --hf='#eeeeee' -p '' --hp 10 --cf='#000000'
 bindsym $mod+Shift+d exec dmenu_run
 bindsym $mod+Control+d exec wofi --show run,drun
 

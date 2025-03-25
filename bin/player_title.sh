@@ -18,4 +18,8 @@ else
   cleaned="$output"
 fi
 
+if ((${#cleaned} > 50)); then
+  cleaned="${cleaned:0:50}..."
+fi
+
 echo " $cleaned"

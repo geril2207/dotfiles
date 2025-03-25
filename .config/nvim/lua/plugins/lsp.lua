@@ -296,6 +296,7 @@ return {
 					disabled = false,
 				},
 				eslint = {
+					root_dir = get_cwd,
 					settings = { format = false },
 				},
 				pylsp = {},

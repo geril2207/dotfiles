@@ -14,3 +14,19 @@ keyword:playfamily
 keyword:.ru
 keyword:valgrind
 keyword:boosty
+
+
+
+
+
+
+
+
+--- NEW
+keyword:twitch
+keyword:ttv
+keyword:.ru
+keyword:telegram
+ruleset:ru_IP
+ruleset:private_SITE
+ruleset:category-ads-all_SITE

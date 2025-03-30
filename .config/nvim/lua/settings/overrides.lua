@@ -9,3 +9,7 @@ function vim.notify(msg, level)
 	end
 	old_notify(msg, level)
 end
+
+function vim.deprecate()
+	return
+end

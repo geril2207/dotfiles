@@ -11,7 +11,7 @@
     "cpu",
     "network",
     "pulseaudio",
-    "battery",
+    // "battery",
     "sway/language",
     "clock",
     "tray",

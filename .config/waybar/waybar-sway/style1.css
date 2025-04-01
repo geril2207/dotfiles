@@ -2,7 +2,7 @@
 
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   min-height: 0;
 }
@@ -21,7 +21,7 @@
   box-shadow: inherit;
   text-shadow: inherit;
 
-  padding: 0px 5px;
+  padding: 0px 8px;
   color: @lavender;
   border-bottom: 4px solid transparent;
 }

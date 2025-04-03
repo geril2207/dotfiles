@@ -13,7 +13,7 @@ if utils.is_nvim_qt then
 	apply_font({ font_family = "JetBrainsMono Nerd Font Mono" })
 elseif utils.is_fvim then
 	apply_font({ font_size = 14 })
-else
+elseif not utils.is_neovide then
 	apply_font()
 end
 
@@ -45,13 +45,15 @@ if not utils.is_goneovim then
 end
 
 if vim.g.neovide then
-	vim.g.neovide_refresh_rate = 75
+	-- vim.g.neovide_position_animation_length = 0.075
+	-- vim.g.neovide_cursor_animation_length = 0.150
+	-- vim.g.neovide_cursor_trail_size = 0.2
+	-- vim.g.neovide_cursor_animate_command_line = true
+	-- vim.g.neovide_scroll_animation_far_lines = 1
+	-- vim.g.neovide_scroll_animation_length = 0.15
+
 	vim.g.neovide_cursor_animate_in_insert_mode = false
-	-- vim.g.neovide_cursor_trail_size = 0
-	-- vim.g.neovide_scroll_animation_length = 0
-	-- vim.g.neovide_cursor_antialiasing = false
-	-- vim.g.neovide_fullscreen = false
-	-- vim.g.neovide_input_use_logo = 0 -- enable use of the logo (cmd) key
+	vim.g.neovide_refresh_rate = 75
 	map_tbl({
 		i = {
 			["<D-v>"] = '<ESC>l"+Pli',

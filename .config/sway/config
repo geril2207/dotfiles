@@ -11,7 +11,7 @@ smart_borders yes
 
 # gaps inner 10
 
-output * background ~/Pictures/Cat.png fill
+output * background ~/my/dotfiles/Pictures/60472-ozero_gory_otrazhenie_nebo_yasnyj_den_goluboj.jpg fill
 
 include ./devices.conf
 include ./startup.conf

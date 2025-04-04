@@ -90,6 +90,7 @@ map_tbl({
 		--?
 		-- ["<leader>cd"] = ":Lspsaga show_cursor_diagnostics<CR>",
 		["gp"] = mcmd("Lspsaga peek_definition"),
+		["<leader>tc"] = mcmd("TSContextToggle"),
 
 		["<A-z>"] = function()
 			vim.wo.wrap = not vim.wo.wrap

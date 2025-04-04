@@ -10,7 +10,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.Icon}}",
+          "template": " {{.Icon}}",
           "foreground": "#45F1C2",
           "background": "transparent",
           "type": "os",
@@ -114,7 +114,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " ❯ ",
+          "template": " ❯",
           "foreground": "#007ACC",
           "type": "text",
           "style": "plain"

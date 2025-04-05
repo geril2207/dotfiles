@@ -1,10 +1,16 @@
 return {
 	{
 		"L3MON4D3/LuaSnip",
-		event = "InsertEnter",
+		lazy = true,
 		build = "make install_jsregexp",
 		config = function()
 			local luasnip = require("luasnip")
+
+			luasnip.setup({
+				region_check_events = "InsertEnter",
+				delete_check_events = "TextChanged,InsertLeave,InsertEnter",
+				update_events = "TextChanged,TextChangedI",
+			})
 
 			local s = luasnip.snippet
 			local i = luasnip.insert_node
@@ -16,27 +22,21 @@ return {
 			local extras = require("luasnip.extras")
 			local rep = extras.rep
 
-			luasnip.setup({
-				region_check_events = "InsertEnter",
-				delete_check_events = "TextChanged,InsertLeave,InsertEnter",
-				update_events = "TextChanged,TextChangedI",
-			})
-
-			vim.api.nvim_create_autocmd("ModeChanged", {
-				group = vim.api.nvim_create_augroup("unlink_snippet", { clear = true }),
-				desc = "Cancel the snippet session when leaving insert mode",
-				pattern = { "s:n", "i:*" },
-				callback = function(args)
-					if
-						luasnip.session
-						and luasnip.session.current_nodes[args.buf]
-						and not luasnip.session.jump_active
-						and not luasnip.choice_active()
-					then
-						luasnip.unlink_current()
-					end
-				end,
-			})
+			-- vim.api.nvim_create_autocmd("ModeChanged", {
+			-- 	group = vim.api.nvim_create_augroup("unlink_snippet", { clear = true }),
+			-- 	desc = "Cancel the snippet session when leaving insert mode",
+			-- 	pattern = { "s:n", "i:*" },
+			-- 	callback = function(args)
+			-- 		if
+			-- 			luasnip.session
+			-- 			and luasnip.session.current_nodes[args.buf]
+			-- 			and not luasnip.session.jump_active
+			-- 			and not luasnip.choice_active()
+			-- 		then
+			-- 			luasnip.unlink_current()
+			-- 		end
+			-- 	end,
+			-- })
 
 			require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -89,6 +89,7 @@ return {
 			{
 				"saadparwaiz1/cmp_luasnip",
 				lazy = true,
+				enabled = false,
 			},
 		},
 	},

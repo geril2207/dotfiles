@@ -2,10 +2,10 @@ vsync = false
 
 
 [font]
-size = 16
+size = 13
 
 [[font.normal]]
-family = "CommitMono"
+family = "JetBrains Mono"
 
 # You can set a different font for fallback
 [[font.normal]]

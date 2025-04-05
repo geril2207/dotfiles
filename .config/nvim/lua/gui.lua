@@ -2,7 +2,7 @@
 -- if nvim-qt, i can use fvim, neovide and nvy
 FontSize = 16
 -- FontFamily = "JetBrainsMono Nerd Font"
-FontFamily = "CommitMono"
+FontFamily = "JetBrains Mono"
 
 local utils = require("utils")
 local map_utils = require("utils.map")

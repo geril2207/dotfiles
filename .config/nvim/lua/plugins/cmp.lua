@@ -3,6 +3,7 @@ return {
 		"geril2207/magazine.nvim",
 		name = "nvim-cmp",
 		dev = false,
+		enabled = false,
 		branch = "docs-view-ts",
 		event = "InsertEnter",
 		opts = function()

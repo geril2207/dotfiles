@@ -1,10 +1,16 @@
 return {
 	{
 		"L3MON4D3/LuaSnip",
-		event = "InsertEnter",
+		lazy = true,
 		build = "make install_jsregexp",
 		config = function()
 			local luasnip = require("luasnip")
+
+			luasnip.setup({
+				region_check_events = "InsertEnter",
+				delete_check_events = "TextChanged,InsertLeave,InsertEnter",
+				update_events = "TextChanged,TextChangedI",
+			})
 
 			local s = luasnip.snippet
 			local i = luasnip.insert_node
@@ -89,6 +95,7 @@ return {
 			{
 				"saadparwaiz1/cmp_luasnip",
 				lazy = true,
+				enabled = false,
 			},
 		},
 	},

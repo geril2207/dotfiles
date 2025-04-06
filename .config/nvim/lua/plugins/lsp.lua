@@ -15,32 +15,6 @@ vim.lsp.util.stylize_markdown = function(bufnr, contents, opts)
 	return contents
 end
 
-local diagnostic_config = {
-	update_in_insert = false,
-	severity_sort = true,
-	underline = {
-		severity = {
-			min = vim.diagnostic.severity.WARN,
-		},
-	},
-	signs = {
-		severity = {
-			min = vim.diagnostic.severity.HINT,
-		},
-		text = {
-			[vim.diagnostic.severity.ERROR] = " ",
-			[vim.diagnostic.severity.WARN] = " ",
-			[vim.diagnostic.severity.INFO] = " ",
-			[vim.diagnostic.severity.HINT] = "󱌹 ",
-		},
-	},
-	virtual_text = {
-		severity = {
-			min = vim.diagnostic.severity.WARN,
-		},
-	},
-}
-
 local get_cwd = function()
 	return vim.uv.cwd()
 end
@@ -112,6 +86,7 @@ local on_attach = function(client, bufnr)
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 	local builtin = require("telescope.builtin")
+
 	map_tbl({
 		i = {
 			["<A-w>"] = { vim.lsp.buf.signature_help, bufopts },
@@ -119,20 +94,13 @@ local on_attach = function(client, bufnr)
 
 		n = {
 			["gD"] = { vim.lsp.buf.declaration, bufopts },
-			-- ["gh"] = { vim.lsp.buf.hover, bufopts },
 			["<leader>lh"] = { vim.lsp.buf.hover, bufopts },
 			["gi"] = { ":Telescope lsp_implementations<CR>", bufopts },
 
-			-- ["<leader>d"] = { vim.lsp.buf.definition, bufopts },
-			-- ["gd"] = { vim.lsp.buf.definition, bufopts },
 			["<leader>d"] = { builtin.lsp_definitions, bufopts },
 			["gd"] = { builtin.lsp_definitions, bufopts },
-			-- ["gd"] = { vim.lsp.buf.definition, bufopts },
-			-- nmap("gt", vim.lsp.buf.type_definition, bufopts)
 			["<leader>k"] = { vim.lsp.buf.signature_help, bufopts },
-			["[e"] = { vim.diagnostic.goto_prev, bufopts },
 			["<leader>r"] = { vim.lsp.buf.rename, bufopts },
-			["]e"] = { vim.diagnostic.goto_next, bufopts },
 			["<leader>la"] = { vim.lsp.buf.code_action, bufopts },
 
 			["<leader>ld"] = function()
@@ -141,6 +109,28 @@ local on_attach = function(client, bufnr)
 					source = "if_many",
 				})
 			end,
+
+			["]e"] = {
+				function()
+					vim.diagnostic.jump({ count = 1, float = true, severity = vim.diagnostic.severity.ERROR })
+				end,
+			},
+			["[e"] = {
+				function()
+					vim.diagnostic.jump({ count = -1, float = true, severity = vim.diagnostic.severity.ERROR })
+				end,
+			},
+
+			["]d"] = {
+				function()
+					vim.diagnostic.jump({ count = 1, float = true })
+				end,
+			},
+			["[d"] = {
+				function()
+					vim.diagnostic.jump({ count = -1, float = true })
+				end,
+			},
 		},
 	})
 end
@@ -192,36 +182,11 @@ return {
 					},
 				},
 			})
-
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"ts_ls",
-					"vtsls",
-					"html",
-					"cssls",
-					"cssmodules_ls",
-					"stylelint_lsp",
-					"jsonls",
-					"clangd",
-					"emmet_ls",
-					"tailwindcss",
-					"eslint",
-					"lua_ls",
-					"astro",
-					"yamlls",
-					"dockerls",
-					"prismals",
-					"bashls",
-					"sqlls",
-					"rust_analyzer",
-					"gopls",
-				},
-			})
+			require("mason-lspconfig").setup()
 
 			local capabilities = vim.tbl_deep_extend(
 				"force",
 				vim.lsp.protocol.make_client_capabilities(),
-				-- nvim-cmp supports additional completion capabilities, so broadcast that to servers.
 				require("cmp_nvim_lsp").default_capabilities()
 			)
 			local lspconfig = require("lspconfig")
@@ -394,31 +359,33 @@ return {
 				end
 			end
 
+			local diagnostic_config = {
+				update_in_insert = false,
+				severity_sort = true,
+				underline = {
+					severity = {
+						min = vim.diagnostic.severity.WARN,
+					},
+				},
+				signs = {
+					severity = {
+						min = vim.diagnostic.severity.HINT,
+					},
+					text = {
+						[vim.diagnostic.severity.ERROR] = " ",
+						[vim.diagnostic.severity.WARN] = " ",
+						[vim.diagnostic.severity.INFO] = " ",
+						[vim.diagnostic.severity.HINT] = "󱌹 ",
+					},
+				},
+				virtual_text = {
+					severity = {
+						min = vim.diagnostic.severity.WARN,
+					},
+				},
+			}
+
 			vim.diagnostic.config(diagnostic_config)
-
-			vim.lsp.handlers["textDocument/publishDiagnostics"] =
-				vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, diagnostic_config)
-
-			vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-				border = "single",
-			})
-
-			vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-				border = "single",
-			})
-			-- Jump directly to the first available definition every time.
-			-- vim.lsp.handlers["textDocument/definition"] = function(_, result)
-			-- 	if not result or vim.tbl_isempty(result) then
-			-- 		--print("[LSP] Could not find definition")
-			-- 		return
-			-- 	end
-			--
-			-- 	if vim.islist(result) then
-			-- 		vim.lsp.util.jump_to_location(result[1], "utf-8")
-			-- 	else
-			-- 		vim.lsp.util.jump_to_location(result, "utf-8")
-			-- 	end
-			-- end
 
 			vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 				pattern = { "**/node_modules/**", "node_modules", "/node_modules/*", "dist", "build" },

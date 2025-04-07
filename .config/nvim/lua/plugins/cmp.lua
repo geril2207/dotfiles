@@ -132,6 +132,9 @@ return {
 						cmp.config.compare.order,
 					},
 				},
+				performance = {
+					max_view_entries = 25,
+				},
 			}
 		end,
 		dependencies = {

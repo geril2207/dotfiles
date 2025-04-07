@@ -2,7 +2,7 @@ vsync = false
 
 
 [font]
-size = 13
+size = 14
 
 [[font.normal]]
 family = "JetBrains Mono"

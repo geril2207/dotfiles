@@ -21,7 +21,7 @@
   box-shadow: inherit;
   text-shadow: inherit;
 
-  padding: 0px 10px;
+  padding: 0px 12px;
   color: @lavender;
   border-bottom: 4px solid transparent;
 }

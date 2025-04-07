@@ -41,7 +41,8 @@ if utils.is_gui then
 end
 
 if not utils.is_goneovim then
-	vim.opt.titlestring = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+	-- vim.opt.titlestring = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+	vim.opt.titlestring = "Neovide - " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
 end
 
 if vim.g.neovide then

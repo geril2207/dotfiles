@@ -1,4 +1,4 @@
 require("settings.overrides")
-require("settings.common")
+require("settings.options")
 require("settings.filetype")
 require("settings.autosave")

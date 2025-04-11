@@ -1,0 +1,15 @@
+{
+  "profile": [
+    {
+      "action": "hijack-dns",
+      "protocol": "dns"
+    },
+    {
+      "action": "route",
+      "outbound": "proxy",
+      "rule_set": ["refilter_domains_SITE", "refilter_ipsum_IP"]
+    }
+  ],
+  "geoip": "https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geoip.db",
+  "geosite": "https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.db"
+}

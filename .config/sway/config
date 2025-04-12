@@ -15,6 +15,7 @@ output * background ~/my/dotfiles/Pictures/60472-ozero_gory_otrazhenie_nebo_yasn
 
 include ./devices.conf
 include ./startup.conf
+include ./local.conf
 
 set $mod Mod4
 

@@ -1,0 +1,128 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true,
+    "output": "/tmp/singbox.log"
+  },
+
+  "dns": {
+    "strategy": "prefer_ipv4",
+    "final": "dns-direct",
+
+    "servers": [
+      {
+        "tag": "dns-direct",
+        "address": "77.88.8.8"
+      },
+      {
+        "tag": "dns-remote",
+        "address": "1.1.1.1"
+      }
+    ]
+  },
+
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "proxy-tun",
+      "mtu": 1500,
+      "address": "172.19.0.1/24",
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "domain_strategy": "prefer_ipv4"
+    }
+  ],
+
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+
+  "route": {
+    "final": "direct",
+    "find_process": true,
+    "auto_detect_interface": true,
+
+    "rules": [
+      { "action": "sniff" },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "outbound": "proxy",
+        "rule_set": ["geosite-ru-blocked"],
+        "domain_keyword": []
+      },
+      {
+        "outbound": "direct",
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-category-ru",
+          "geoip-ru"
+        ]
+      },
+      {
+        "rule_set": ["geosite-category-ads-all"],
+        "action": "reject"
+      }
+    ],
+
+    "rule_set": [
+      {
+        "type": "local",
+        "tag": "geoip-private",
+        "format": "binary",
+        "path": "rulesets/geoip-private.srs"
+      },
+      {
+        "type": "local",
+        "tag": "geoip-ru-blocked",
+        "format": "binary",
+        "path": "rulesets/geoip-ru-blocked.srs"
+      },
+      {
+        "type": "local",
+        "tag": "geoip-ru",
+        "format": "binary",
+        "path": "rulesets/geoip-ru.srs"
+      },
+      {
+        "type": "local",
+        "tag": "geosite-category-ads-all",
+        "format": "binary",
+        "path": "rulesets/geosite-category-ads-all.srs"
+      },
+      {
+        "type": "local",
+        "tag": "geosite-category-ru",
+        "format": "binary",
+        "path": "rulesets/geosite-category-ru.srs"
+      },
+      {
+        "type": "local",
+        "tag": "geosite-private",
+        "format": "binary",
+        "path": "rulesets/geosite-private.srs"
+      },
+      {
+        "type": "local",
+        "tag": "geosite-ru-blocked",
+        "format": "binary",
+        "path": "rulesets/geosite-ru-blocked.srs"
+      }
+    ]
+  },
+
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "./ignored/cache.db"
+    }
+  }
+}

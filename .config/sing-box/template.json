@@ -1,8 +1,7 @@
 {
   "log": {
     "level": "info",
-    "timestamp": true,
-    "output": "/tmp/singbox.log"
+    "timestamp": true
   },
 
   "dns": {

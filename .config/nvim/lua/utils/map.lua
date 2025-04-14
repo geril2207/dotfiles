@@ -20,7 +20,7 @@ end
 --- @param rhs string|function
 --- @param opts table?
 function M.map(mode, lhs, rhs, opts)
-	local options = { noremap = true, silent = true }
+	local options = { silent = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end

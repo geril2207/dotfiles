@@ -55,7 +55,7 @@
       {
         "outbound": "proxy",
         "rule_set": ["geosite-ru-blocked"],
-        "domain_keyword": ["ytimg", "youtube", "goglevideo"]
+        "domain_keyword": ["ytimg", "youtube", "googlevideo"]
       },
       {
         "outbound": "direct",

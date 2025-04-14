@@ -8,6 +8,16 @@ return {
 		config = function()
 			-- local ls = require("luasnip")
 
+			-- cmp.snippet_active but without is_hidden_snippet()
+			-- https://github.com/Saghen/blink.cmp/blob/a1b5c1a47b65630010bf030c2b5a6fdb505b0cbb/lua/blink/cmp/config/snippets.lua#L45
+			local snippet_active = function(filter)
+				local ls = require("luasnip")
+				if filter and filter.direction then
+					return ls.jumpable(filter.direction)
+				end
+				return ls.in_snippet()
+			end
+
 			require("blink.cmp").setup({
 				enabled = function()
 					return not vim.tbl_contains({ "DressingInput" }, vim.bo.filetype)
@@ -28,7 +38,7 @@ return {
 								return cmp.accept()
 							end
 
-							if cmp.snippet_active({ direction = 1 }) then
+							if snippet_active({ direction = 1 }) then
 								return cmp.snippet_forward()
 							end
 						end,

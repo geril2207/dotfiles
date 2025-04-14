@@ -25,10 +25,22 @@ local function execute_scroll(direction, history)
 end
 
 map_tbl({
+	nsi = {
+		["<Esc>"] = {
+			function()
+				if require("luasnip").expand_or_jumpable() then
+					require("luasnip").unlink_current()
+				end
+				return "<Esc>"
+			end,
+			{ expr = true },
+		},
+	},
+
 	i = {
-		["jk"] = "<ESC>",
-		["jj"] = "<ESC>",
-		["<C-v>"] = '<ESC>"+pa',
+		["jk"] = { "<ESC>", { remap = true } },
+		["jj"] = { "<ESC>", { remap = true } },
+		["<C-v>"] = { '<ESC>"+pa', { remap = true } },
 	},
 
 	n = {
@@ -42,7 +54,7 @@ map_tbl({
 		["<C-n>"] = mcmd("noh"),
 		["<leader>e"] = mcmd("NvimTreeFocus"),
 		["<leader>ab"] = mcmd("NvimTreeClose"),
-		["K"] = "<ESC>",
+		["K"] = { "<ESC>", { remap = true } },
 		["<C-z>"] = mcmd("undo"),
 		["<C-Z>"] = mcmd("redo"),
 		["<C-s>"] = mcmd("silent! w"),
@@ -124,7 +136,7 @@ map_tbl({
 		["Y"] = '"+y',
 		["y"] = "ygv<ESC>",
 		["<C-c>"] = '"+y',
-		["K"] = "<ESC>",
+		["K"] = { "<ESC>", { remap = true } },
 		["<"] = "<gv",
 		[">"] = ">gv",
 	},

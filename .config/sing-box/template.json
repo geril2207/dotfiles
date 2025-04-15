@@ -55,7 +55,8 @@
       {
         "outbound": "proxy",
         "rule_set": ["geosite-ru-blocked"],
-        "domain_keyword": ["ytimg", "youtube", "googlevideo"]
+        "domain_keyword": ["ytimg", "youtube", "googlevideo", "instagram"],
+        "process_name": ["Discord.exe"]
       },
       {
         "outbound": "direct",

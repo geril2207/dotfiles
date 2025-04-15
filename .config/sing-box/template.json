@@ -49,11 +49,15 @@
         "action": "hijack-dns"
       },
       {
-        "rule_set": ["geosite-ru-blocked"],
+        "process_name": ["Discord.exe"],
         "outbound": "proxy"
       },
       {
-        "process_name": ["Discord.exe"],
+        "process_name": ["Warframe.x64.exe"],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": ["geosite-ru-blocked"],
         "outbound": "proxy"
       },
       {

@@ -8,4 +8,4 @@ Write-Host "Running follow-up command..."
 
 Set-Location "$HOME/my/dotfiles/.config/sing-box"
 
-sing-box run -c .\ignored\1.json 2> asd.log
+sing-box run -c .\ignored\1.json 2> .\ignored\asd.log

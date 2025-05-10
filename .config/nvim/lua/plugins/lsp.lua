@@ -140,6 +140,7 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = true,
 		event = "VeryLazy",
+		commit = "4ea9083b6d3dff4ddc6da17c51334c3255b7eba5",
 		config = function()
 			require("mason").setup({
 				ensure_installed = {

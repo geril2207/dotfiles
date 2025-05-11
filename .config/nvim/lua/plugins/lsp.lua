@@ -140,7 +140,7 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = true,
 		event = "VeryLazy",
-		commit = "4ea9083b6d3dff4ddc6da17c51334c3255b7eba5",
+		-- commit = "4ea9083b6d3dff4ddc6da17c51334c3255b7eba5",
 		config = function()
 			require("mason").setup({
 				ensure_installed = {
@@ -183,7 +183,6 @@ return {
 					},
 				},
 			})
-			require("mason-lspconfig").setup()
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
@@ -394,7 +393,6 @@ return {
 			})
 		end,
 		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
 			"williamboman/mason.nvim",
 			{
 				"j-hui/fidget.nvim",

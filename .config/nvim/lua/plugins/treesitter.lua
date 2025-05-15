@@ -52,9 +52,10 @@ return {
 					"c",
 				},
 				sync_install = false,
+
 				indent = {
 					enable = true,
-					disable = { "rust" },
+					-- disable = { "rust" },
 				},
 
 				highlight = {

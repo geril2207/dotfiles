@@ -29,6 +29,8 @@ api.nvim_create_autocmd({ "TextChanged", "InsertLeave", "BufLeave" }, {
 	group = group,
 	desc = "AutoSave",
 	callback = function(opts)
-		vim.cmd("silent! wa")
+		vim.schedule(function()
+			vim.cmd("silent! wa")
+		end)
 	end,
 })

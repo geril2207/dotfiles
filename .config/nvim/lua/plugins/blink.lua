@@ -3,6 +3,7 @@ return {
 		"saghen/blink.cmp",
 		dependencies = { "LuaSnip" },
 		build = "cargo +nightly build --release",
+		dev = false,
 		lazy = true,
 		enabled = true,
 		config = function()

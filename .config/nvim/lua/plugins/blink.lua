@@ -87,7 +87,7 @@ return {
 
 					accept = {
 						-- neovide cursor flicker
-						dot_repeat = false,
+						dot_repeat = true,
 
 						auto_brackets = {
 							enabled = false,

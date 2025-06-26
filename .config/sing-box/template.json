@@ -49,6 +49,18 @@
         "action": "hijack-dns"
       },
       {
+        "domain_keyword": [
+          "steamdb",
+          ".ua",
+          "twitch",
+          "ttv",
+          "anthropic",
+          "claude",
+          "google"
+        ],
+        "outbound": "proxy"
+      },
+      {
         "process_name": ["Discord.exe"],
         "outbound": "proxy"
       },

@@ -123,7 +123,8 @@ require("nvim-tree").setup({
 
 local function open_nvim_tree(data)
 	local directory = vim.fn.isdirectory(data.file) == 1
-	local real_file = vim.fn.filereadable(data.file) == 1
+	-- local real_file = vim.fn.filereadable(data.file) == 1
+	local real_file = not string.find(data.file, "NvimTree")
 
 	if directory then
 		vim.cmd.cd(data.file)

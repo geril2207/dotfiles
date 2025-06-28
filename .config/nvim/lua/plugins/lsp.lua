@@ -86,7 +86,7 @@ local on_attach = function(client, bufnr)
 
 	map_tbl({
 		i = {
-			["<A-w>"] = { vim.lsp.buf.signature_help, bufopts },
+			["<M-k>"] = { vim.lsp.buf.signature_help, bufopts },
 		},
 
 		n = {

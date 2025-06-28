@@ -8,17 +8,17 @@ return {
 		},
 		config = function()
 			require("codecompanion").setup({
-				strategies = {
-					chat = {
-						adapter = "gemini",
-					},
-					inline = {
-						adapter = "gemini",
-					},
-					cmd = {
-						adapter = "gemini",
-					},
-				},
+				-- strategies = {
+				-- 	chat = {
+				-- 		adapter = "gemini",
+				-- 	},
+				-- 	inline = {
+				-- 		adapter = "gemini",
+				-- 	},
+				-- 	cmd = {
+				-- 		adapter = "gemini",
+				-- 	},
+				-- },
 
 				adapters = {
 					gemini = function()

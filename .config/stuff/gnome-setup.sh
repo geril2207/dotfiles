@@ -1,5 +1,5 @@
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 40
-gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 50
+gsettings set org.gnome.desktop.peripherals.keyboard delay 150
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 9
 for i in {1..9}; do 

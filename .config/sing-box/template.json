@@ -52,11 +52,10 @@
         "domain_keyword": [
           "steamdb",
           ".ua",
-          "twitch",
-          "ttv",
           "anthropic",
           "claude",
-          "google"
+          "google",
+          "usher.ttvnw"
         ],
         "outbound": "proxy"
       },

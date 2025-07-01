@@ -65,6 +65,10 @@
         "outbound": "proxy"
       },
       {
+        "process_path": ["/opt/discord/Discord", "/app/discord/Discord"],
+        "outbound": "proxy"
+      },
+      {
         "process_name": ["Warframe.x64.exe"],
         "outbound": "direct"
       },

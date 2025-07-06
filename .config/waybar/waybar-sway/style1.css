@@ -8,7 +8,8 @@
 }
 
 #waybar {
-  background: @base;
+  background: rgba(0, 0, 0, 0.5);
+  /* background: @base; */
   color: @text;
 }
 

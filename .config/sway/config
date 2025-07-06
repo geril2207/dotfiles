@@ -11,7 +11,7 @@ smart_borders yes
 
 gaps inner 8
 
-output * background ~/my/dotfiles/Pictures/windows-black.png fill
+output * background ~/my/dotfiles/Pictures/comfy-home.png fill
 
 include ./devices.conf
 include ./startup.conf

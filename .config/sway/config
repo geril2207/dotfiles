@@ -9,9 +9,9 @@ mouse_warping none
 focus_on_window_activation smart
 smart_borders yes
 
-# gaps inner 10
+gaps inner 8
 
-output * background ~/my/dotfiles/Pictures/60472-ozero_gory_otrazhenie_nebo_yasnyj_den_goluboj.jpg fill
+output * background ~/my/dotfiles/Pictures/windows-black.png fill
 
 include ./devices.conf
 include ./startup.conf
@@ -160,16 +160,16 @@ mode "resize" {
 
 
 for_window [app_id="foot"] {
-  border pixel 0
+  # border pixel 0
   # opacity 0.8
 }
 
 for_window [app_id="Alacritty"] {
-  border pixel 0
+  # border pixel 0
   # opacity 0.9
 }
 for_window [app_id="kitty"] {
-  border pixel 0
+  # border pixel 0
   # opacity 0.9
 }
 for_window [app_id="org.wezfurlong.wezterm"] border pixel 0
@@ -179,14 +179,14 @@ for_window [class="neovide"] focus
 
 for_window [class="Code"] {
   focus
-  border pixel 0
+  # border pixel 0
   opacity 0.9
 }
 
 #vscode native wayland
 for_window [app_id="code-url-handler"] {
   focus
-  border pixel 0
+  # border pixel 0
   opacity 0.9
 }
 
@@ -205,3 +205,5 @@ for_window [class="discord"] layout tabbed
 for_window [app_id="discord"] layout tabbed
 
 for_window [app_id="lxqt-policykit-agent"] floating enable
+
+include ./catppuccin

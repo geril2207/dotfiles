@@ -38,6 +38,7 @@ require("lazy").setup("plugins", {
 	},
 })
 
+require("my.winbar")
 require("my.settings")
 require("my.keymaps")
 require("my.gui")

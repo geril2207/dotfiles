@@ -136,7 +136,7 @@ return {
 				},
 
 				appearance = {
-					kind_icons = require("icons").symbol_kinds,
+					kind_icons = require("my.icons").symbol_kinds,
 				},
 			})
 		end,

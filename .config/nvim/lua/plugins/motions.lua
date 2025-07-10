@@ -1,4 +1,4 @@
-local map_utils = require("utils.map")
+local map_utils = require("my.utils.map")
 local mcmd = map_utils.cmd
 local double_leader = map_utils.double_leader
 

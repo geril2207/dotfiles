@@ -1,4 +1,4 @@
-local utils = require("utils.map")
+local utils = require("my.utils.map")
 return {
 	{
 		"ibhagwan/fzf-lua",

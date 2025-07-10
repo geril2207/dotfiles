@@ -38,8 +38,8 @@ require("lazy").setup("plugins", {
 	},
 })
 
-require("settings")
-require("keymaps")
-require("gui")
-require("commands")
+require("my.settings")
+require("my.keymaps")
+require("my.gui")
+require("my.commands")
 -- require("vim._extui").enable({})

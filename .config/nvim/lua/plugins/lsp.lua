@@ -20,7 +20,7 @@ local get_cwd = function()
 end
 
 -- local methods = vim.lsp.protocol.Methods
-local map_utils = require("utils.map")
+local map_utils = require("my.utils.map")
 local map_tbl = map_utils.map_tbl
 
 --- Sets up LSP keymaps and autocommands for the given buffer.

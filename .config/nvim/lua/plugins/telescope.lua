@@ -124,7 +124,7 @@ return {
 			require("telescope").load_extension("fzf")
 
 			local tree_api = require("nvim-tree.api")
-			local tree_utils = require("config.nvim-tree.utils")
+			local tree_utils = require("my.nvim-tree.utils")
 			local api = vim.api
 
 			api.nvim_create_autocmd("User", {

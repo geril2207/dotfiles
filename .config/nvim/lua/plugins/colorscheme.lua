@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			local utils = require("utils")
+			local utils = require("my.utils")
 			local transparent = utils.transparent
 			transparent = false
 
